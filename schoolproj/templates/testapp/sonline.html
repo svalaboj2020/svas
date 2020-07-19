@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+{%extends 'testapp/base.html' %}
+
+{%load static%}
+{%block child_block%}
+<link rel="stylesheet" href="{%static "css/home_c.css"%}">
+<link rel="stylesheet" href="{%static "css/shome.css"%}">
+
+
+  <div class="container" align="center">
+      <h1>online class page </h1>
+      <p>{{sname}}</p>
+      <p>{{class}}</p>
+      <p>{{section}}</p>
+      <a href="https://meet.google.com/msn-rupw-bjz">online class</a>
+  </div>
+
+
+
+{%endblock%}

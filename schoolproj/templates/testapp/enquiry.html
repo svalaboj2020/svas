@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+{%extends 'testapp/base.html' %}
+{%load static%}
+{%block child_block%}
+  <link rel="stylesheet" href="{%static "css/enquiry.css"%}">
+
+
+<div class="container" align="center">
+<h2>Enquiry Form</h2>
+  <form   method="post">
+    {{form.as_p}}
+    {%csrf_token%}
+    <input type="submit" class="btn btn-primary" value="submit">
+  </form>
+
+</div>
+
+{%endblock %}

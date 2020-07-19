@@ -1,0 +1,8 @@
+sudo apt-get install python-pip
+pip install mysql-connector-python
+---
+db instal----
+yum localinstall /home/   x.rpm
+/etc/init.d/oracle-xe-18c configure
+. oraenv
+XE

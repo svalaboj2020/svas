@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+{%extends 'testapp/base.html' %}
+{%load static%}
+{%block child_block%}
+<link rel="stylesheet" href="{%static "css/homer.css"%}">
+<div class="container" align="center">
+<h1>Students Information</h1> <hr>
+{%if students%}
+  <table border="2" >
+    <thead>
+      <th>Student Name</th>
+      <th>Parent Name</th>
+      <th>DOB</th>
+      <th>Email</th>
+      <th>Section</th>
+      <th>Class</th>
+      <th>Login Name</th>
+    </thead>
+    {%for student in students%}
+    <tr>
+      <td>{{student.sname}}</td>
+      <td>{{student.pname}}</td>
+      <td>{{student.DOB}}</td>
+      <td>{{student.email}}</td>
+      <td>{{student.section}}</td>
+      <td>{{student.classx}}</td>
+      <td>{{student.lname}}</td>
+    </tr>
+    {%endfor%}
+
+  </table>
+    {%else%}
+    <p>No student Information</p>
+    {%endif%}
+</div>
+{%endblock%}

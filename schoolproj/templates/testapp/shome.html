@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%include 'testapp/base.html' %}
+
+{%load static%}
+{%block child_block%}
+<link rel="stylesheet" href="{%static "css/home_c.css"%}">
+<link rel="stylesheet" href="{%static "css/shome.css"%}">
+
+<div class="sidenav">
+<a href="/shomesm"   > <img src="https://icons.iconarchive.com/icons/martz90/circle/64/books-icon.png" >Study Material</a>
+<a href="#services"><img src="https://icons.iconarchive.com/icons/blackvariant/shadow135-system/64/Notes-icon.png" >Assignments</a>
+<a href="/sonline"><img src="https://icons.iconarchive.com/icons/bokehlicia/captiva/64/movie-icon.png" >On line classes</a>
+<a href="#contact"><img src="https://icons.iconarchive.com/icons/sinisa91g/supernova/64/Videos-icon.png" >Recorded Classes</a>
+</div>
+  <div class="container" align="center">
+      <h1>Student Home page </h1>
+      <p>{{sname}}</p>
+      <p>{{classx}}</p>
+      <p>{{section}}</p>
+
+  </div>
+
+{%endblock%}
+
+{%block grand_child_block%}
+{%endblock%}

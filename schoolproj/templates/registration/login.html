@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html' %}
+{%load static%}
+{%block child_block%}
+<link rel="stylesheet" href="{%static "css/home_c.css"%}">
+<div class="container" align="center">
+  <form  method="post">
+    <h1>Login form </h1>
+
+      {{form.as_p}}
+      {%csrf_token%}
+ <input type="submit" class="btn btn-primary " value="Login">
+
+
+  </form>
+
+</div>
+
+{%endblock%}

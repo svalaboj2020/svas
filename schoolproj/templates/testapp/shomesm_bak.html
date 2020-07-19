@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+{%extends 'testapp/base.html' %}
+
+{%load static%}
+{%block child_block%}
+<link rel="stylesheet" href="{%static "css/home_c.css"%}">
+<link rel="stylesheet" href="{%static "css/shome.css"%}">
+
+<div class="sidenav">
+<a href="/shomesm"   > <img src="https://icons.iconarchive.com/icons/martz90/circle/64/books-icon.png" >Study Material</a>
+<a href="#services"><img src="https://icons.iconarchive.com/icons/blackvariant/shadow135-system/64/Notes-icon.png" >Assignments</a>
+<a href="/sonline"><img src="https://icons.iconarchive.com/icons/bokehlicia/captiva/64/movie-icon.png" >On line classes</a>
+<a href="#contact"><img src="https://icons.iconarchive.com/icons/sinisa91g/supernova/64/Videos-icon.png" >Recorded Classes</a>
+</div>
+  <div class="container" align="center">
+      <h1>Student Home page </h1>
+
+      <a href="/smaths"   > <img src="https://icons.iconarchive.com/icons/kyo-tux/soft/64/Tutorial-icon.png" >Maths</a>
+      <a href="/senglish"    <img src="https://icons.iconarchive.com/icons/martz90/circle/64/books-icon.png" >English</a>
+      <a href="/sscience"   > <img src="https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/64/Categories-applications-education-science-icon.png">Science</a>
+      <a href="/shindi"   > <img src="https://icons.iconarchive.com/icons/alecive/flatwoken/64/Apps-Google-Play-Books-icon.png">Hindi</a>
+      <a href="/stelugu"   > <img src="https://icons.iconarchive.com/icons/google/noto-emoji-objects/64/62858-closed-book-icon.png">Telugu</a>
+
+      <br>
+      {{request.user.username}}
+      <br>
+      {%if recs %}
+
+      <table border="2">
+        <thead>
+          <th>Title</th>
+          <th>Subject</th>
+          <th>pdf</th>
+          <th>DownLoad</th>
+          <th>Std</th>
+          <th>Section</th>
+        </thead>
+        {%for rec in recs%}
+        <tr>
+          <td>{{rec.title}}</td>
+          <td>{{rec.subject}}</td>
+          <td>{{rec.pdf}}</td>
+          <td><a href="{{rec.pdf.url}}" class="btn btn-primary "> Download</a></td>
+          <td>{{rec.std}}</td>
+          <td>{{rec.sec}}</td>
+        </tr>
+        {%endfor%}
+      </table>
+      {%else%}
+      <h1>No report records</h1>
+      {%endif%}
+  </div>
+{%endblock%}

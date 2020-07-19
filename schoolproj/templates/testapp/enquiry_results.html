@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html' %}
+{%load static%}
+
+{%block child_block%}
+
+ <link rel="stylesheet" href="{%static "css/homer.css"%}">
+<div class="container" align="center">
+
+
+ <h1>Enquiry results Information</h1> <hr>
+ {%if enquirys%}
+   <table border="2" >
+     <thead>
+       <th>Date</th>
+       <th>Name of Equirer</th>
+       <th>Phone number</th>
+       <th>Email</th>
+       <th>Message</th>
+     </thead>
+     {%for enquiry in enquirys%}
+     <tr>
+       <td>{{enquiry.date_s}}</td>
+       <td>{{enquiry.name}}</td>
+       <td>{{enquiry.phone}}</td>
+       <td>{{enquiry.email}}</td>
+       <td>{{enquiry.message}}</td>
+     </tr>
+     {%endfor%}
+
+   </table>
+     {%else%}
+     <p>No Enquiry results Information</p>
+     {%endif%}
+</div>
+{%endblock%}

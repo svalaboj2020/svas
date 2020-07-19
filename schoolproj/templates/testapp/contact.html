@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html' %}
+{%load static%}
+{%block child_block%}
+<link rel="stylesheet" href="{%static "css/home_c.css"%}">
+<div class="container" align="center">
+    <h1>Contact Us </h1>
+    {%if form%}:
+      {{form.as_p}}
+      <p>submitted your information successfully, executive will get in touch with you</p>
+
+
+    {%endif%}
+</div>
+
+{%endblock%}

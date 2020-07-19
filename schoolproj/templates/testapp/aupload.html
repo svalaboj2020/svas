@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html' %}
+{%load static%}
+{%block child_block%}
+<link rel="stylesheet" href="{%static "css/home_c.css"%}">
+<div class="container" align="center">
+  <h1>{{title}}</h1>
+  <form  method="post" enctype="multipart/form-data">
+    {{form.as_p}}
+    {%csrf_token%}
+    <input type="submit" class="btn btn-primay" value="UploadFile">
+  </form>
+</div>
+
+{%endblock%}

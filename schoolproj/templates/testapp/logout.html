@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html'%}
+{%load static%}
+{%block child_block%}
+<link rel="stylesheet" href="{%static "css/home_c.css"%}">
+<!-- <div class="jumbotron"> -->
+  <div class="container" align="center">
+    <h1>Thanks for visiting our website</h1>
+    <h2>to login again </h2>
+    <a class='btn btn-primary btn-success btn-lg' href="/accounts/login">Login</a>
+
+  </div>
+
+<!-- </div> -->
+{%endblock%}
