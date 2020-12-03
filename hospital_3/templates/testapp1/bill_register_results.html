@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{%include 'testapp1/rhome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<div class="div2"; align="center">
+  {{title}}
+  <br><br>
+  {%if form %}
+  <form  method="post">
+    {%csrf_token%}
+
+    {{form.as_p}}
+    <input type="submit" class="btn btn-success" name="" value="Save">
+  </form> <br><br>
+  {%endif%}
+
+  {%if areport %}
+
+  <table border="2">
+    <thead>
+    <th>patient_name</th>
+    <th>reg_entry_ref</th>
+    <th>bill_no</th>
+    <th>admission_type</th>
+    <th>billed_datetime</th>
+    <th>billed_amount</th>
+    <th>billed_by</th>
+    <th>status</th>
+      <th>Action</th>
+      <th>Action</th>
+
+    </thead>
+
+
+    <tr>
+      <td>{{areport.patient_name}}</td>
+      <td>{{areport.reg_entry_ref}}</td>
+      <td>{{areport.bill_no}}</td>
+      <td>{{areport.admission_type}}</td>
+      <td>{{areport.billed_datetime}}</td>
+      <td>{{areport.billed_amount}}</td>
+      <td>{{areport.billed_by}}</td>
+      <td>{{areport.status}}</td>
+      <!-- <td>{{areport.total_tax_amount}}</td> -->
+      <td><a href="/sel_doc/{{id}}/{{areport.bill_no}}" class="btn btn-primary "> doc Billing</a></td>
+      <td><a href="/sel_lab/{{id}}/{{areport.bill_no}}" class="btn btn-primary "> lab Billing</a></td>
+    </tr>
+
+
+
+  </table>
+  {%else%}
+  <!-- <h1>No report records</h1> -->
+  {%endif%}
+
+</div>
+
+
+{%endblock%}

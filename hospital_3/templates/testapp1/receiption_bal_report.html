@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{%extends 'testapp1/rhome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+
+
+<div class="div2"; align="center">
+ <h3>{{title}}  </h3>
+
+
+  {%if be_reports %}
+    <h3>Balance sheet-sales</h3>
+    <table border="3">
+     <thead>
+      <th>bill_no</th>
+      <th>billed_amount</th>
+      <th>admission_type</th>
+      <th>billed_datetime</th>
+
+     </thead>
+     {%for be in be_reports%}
+     <tr>
+      <td>{{be.bill_no}}</td>
+      <td>{{be.billed_amount}}</td>
+      <td>{{be.admission_type}}</td>
+      <td>{{be.billed_datetime}}</td>
+
+     </tr>
+     {%endfor%}
+
+    </table>
+     <p>Total Sales in &#8377;: {{t_be_grand_total}} &emsp;  </p>
+  {%endif%}
+
+  {%if rse_reports %}
+    <h3>Balance sheet-returns</h3>
+    <table border="2">
+     <thead>
+      <th>bill_no</th>
+      <th>rbill_no</th>
+      <th>rbill_amount</th>
+      <th>rbill_tax_amount</th>
+      <th>rbill_grand_total</th>
+      <th>returned_sell_datetime</th>
+      <th>mode_of_payment</th>
+      <th>cash</th>
+      <th>card</th>
+     </thead>
+     {%for rse in rse_reports%}
+     <tr>
+      <td>{{rse.sell_entry_ref__bill_no}}</td>
+      <td>{{rse.rbill_no}}</td>
+      <td>{{rse.rbill_amount}}</td>
+      <td>{{rse.rbill_tax_amount}}</td>
+      <td>{{rse.rbill_grand_total}}</td>
+      <td>{{rse.returned_sell_datetime}}</td>
+      <td>{{rse.mode_of_payment}}</td>
+      <td>{{rse.paid_by_cash}}</td>
+      <td>{{rse.paid_by_card}}</td>
+     </tr>
+     {%endfor%}
+
+    </table>
+    <p>Total Returns in INR: {{t_rse_grand_total}}</p>
+  {%endif%}
+
+    {%if net_balance %}
+      <p style="font-size:24px; color:Blue;">Total Net balance in &#8377;: {{net_balance}}</p>
+    {%endif%}
+
+</div>
+
+
+{%endblock%}

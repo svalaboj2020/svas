@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{%include 'testapp/shome.html' %}
+{%load static%}
+<link rel="stylesheet" href="{%static "css/dash_board.css"%}">
+
+{%block grand_child_block%}
+
+<div class="container">
+  <div class="row">
+    <div align="center" id="id1" class="col-sm-4">
+      {%if ie_low_stock%}
+        <h3>Low Stock</h3>
+        <h5 align="center";>count:{{ie_low_stock|length}}</h5>
+        <table border="1px">
+            <thead>
+              <th>item</th>
+              <th>supplier</th>
+              <th>Qty_in</th>
+              <th>Qty_avail</th>
+            </thead>
+            {%for ie in ie_low_stock%}
+            <tr>
+              <td>{{ie.item_name}}</td>
+              <td>{{ie.supplier_ref}}</td>
+              <td align="center";>{{ie.Qty_in}}</td>
+              <td align="center";>{{ie.Qty_available}}</td>
+            </tr>
+            {%endfor%}
+        </table> <br><br><br><br><br><br>
+
+        <a href="/report_disp/low_stock" class='btn btn-primary'>LowReport</a>
+      {%endif%}
+
+    </div>
+    <div align="center" id="id2" class="col-sm-4">
+      <h3>Near to Expiry Stock</h3>
+      <h5 align="center";>stock expires within 7 months count:{{ie_expiry_stock|length}}</h5>
+      <table border="1px">
+          <thead>
+            <th>item</th>
+            <th>print_name</th>
+            <th>supplier_ref</th>
+            <th>BatchNo</th>
+            <th>Exp_date</th>
+            <th>Qty_avail</th>
+            <th>invoice_no</th>
+          </thead>
+          {%for ie in ie_expiry_stock%}
+          <tr>
+            <td>{{ie.item_name}}</td>
+            <td>{{ie.print_name}}</td>
+            <td>{{ie.supplier_ref}}</td>
+            <td>{{ie.BatchNo}}</td>
+            <td>{{ie.Exp_date}}</td>
+            <td>{{ie.Qty_available}}</td>
+            <td>{{ie.purchase_ref__invoice_no}}</td>
+          </tr>
+          {%endfor%}
+      </table> <br><br><br><br><br><br>
+      <a  href="/expiry_report/7" class='btn btn-success'>ExpiryReport</a>
+    </div>
+    <div align="center" id="id3" class="col-sm-4">
+      <h3>Current Stock</h3>
+      <h5 align="center";>count:{{ie_current_stock|length}}</h5>
+      <table border="1px">
+          <thead>
+            <th>item</th>
+            <th>Qty_avail</th>
+
+          </thead>
+          {%for k,v in ie_current_stock.items %}
+
+          <tr>
+            <td>{{k}}</td>
+            <td align="center";>{{v}}</td>
+
+          </tr>
+
+          {%endfor%}
+      </table> <br><br>
+
+      <a href="/report_disp/summary" class='btn btn-primary'>CurrentReport</a>
+    </div>
+
+  </div>
+
+</div>
+
+
+{%endblock%}

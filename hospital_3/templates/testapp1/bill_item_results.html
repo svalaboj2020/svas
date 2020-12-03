@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{%extends 'testapp1/rhome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+
+
+<div class="div2"; align="center">
+
+  <!-- {%if result %}
+  {{result.bill_no_ref}} <br>
+  {{result.email}} <br>
+  {{result.phone}}
+  {%else%}
+  not created
+  {%endif%} -->
+
+
+{%if be%}
+<h3>Bill Entry Details</h3>
+<table border="2">
+  <thead>
+    <th>bill_no</th>
+    <th>billed_amount </th>
+    <th>billed_datetime</th>
+    <th>status</th>
+    <th>mode_of_pay</th>
+    <th>tx_ref</th>
+    <th>bank</th>
+    <th>cash</th>
+    <th>card</th>
+    <th>return_cash</th>
+    <!-- <th>due_amount</th> -->
+
+  </thead>
+
+  <tr>
+    <td>{{be.bill_no}}</td>
+    <td style="color:Red;text-align:center;font-size:160%;">{{be.billed_amount}}</td>
+    <td>{{be.sell_datetime}}</td>
+    <td>{{be.status}}</td>
+    <td>{{be.mode_of_payment}}</td>
+    <td>{{be.tx_id_reference}}</td>
+    <td>{{be.card_issued_bank}}</td>
+    <td style="color:blue;text-align:center;font-size:160%;">{{be.paid_by_cash}}</td>
+    <td style="text-align:center;font-size:160%;">{{be.paid_by_card}}</td>
+    <td style="color:blue;text-align:center;font-size:160%;">{{be.return_cash}}</td>
+    <!-- <td style="color:red;text-align:center;font-size:160%;">{{be.due_amount}}</td> -->
+
+  </tr>
+</table>
+<br><br>
+{%endif%}
+
+
+
+<h3>Bill Item Entry List</h3>
+
+  {%if areports %}
+
+  <table border="2">
+    <thead>
+      <th>patient_name</th>
+      <th>bill_entry_ref</th>
+      <th>service_type</th>
+      <th>service_name</th>
+      <th>service_amount</th>
+      <th>service_tax_amount</th>
+      <th>visit_type</th>
+      <th>Ref_by</th>
+      <th>status</th>
+        {%if status == 'UNLOCKED'%}
+      <th>Action</th>
+        {%endif%}
+
+    </thead>
+    {%for areport in areports%}
+    <tr>
+      <td>{{areport.patient_name}}</td>
+      <td>{{areport.bill_entry_ref}}</td>
+      <td>{{areport.service_type}}</td>
+      <td>{{areport.service_name}}</td>
+      <td>{{areport.service_amount}}</td>
+      <td>{{areport.service_tax_amount}}</td>
+      <td>{{areport.visit_type}}</td>
+      <td>{{areport.Ref_by}}</td>
+      <td>{{areport.status}}</td>
+        {%if status == 'UNLOCKED'%}
+      <td><a href="/del_oie/{{areport.id}}" class="btn btn-primary "> delete</a></td>
+        {%endif%}
+      <!-- <td><a href="/upd_oie/{{areport.id}}" class="btn btn-secondary "> update</a></td> -->
+    </tr>
+    {%endfor%}
+  </table> <br>
+  <a href="/generate_lab_bill1/{{be.reg_entry_ref.id}}/{{be.bill_no}}" class="btn btn-primary "> GenerateBillLabTests</a>
+  {%else%}
+  <h4>No Records</h4>
+  <p>you can bill items by 'List Bills Entries --> Add bill Item'</p>
+  {%endif%} <br><br>
+  <!-- {%if se.status == "UNLOCKED" %}
+<td> <a class="btn btn-primary " href="/pay_rbill/{{se.bill_no}}" role="button">pay retail Bill</a></td>
+  {%endif%} -->
+
+
+</div>
+
+
+
+
+{%endblock%}

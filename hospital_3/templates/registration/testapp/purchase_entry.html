@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{%extends 'testapp/shome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+<div class="class1"; align="center">
+
+
+<h1>{{title}}</h1>
+{% if purchase_entry_list%}
+<table border="2">
+  <thead>
+    <th>purchase_type</th>
+    <th>supplier_ref1</th>
+    <th>invoice_no</th>
+    <th>invoice_amount</th>
+    <th>tax_amount</th>
+    <th>grand_total</th>
+    <th>purchase_date</th>
+    <th>Action</th>
+    <th>Action</th>
+
+  </thead>
+  {%for pe in purchase_entry_list%}
+  <tr>
+    <td>{{pe.purchase_type}}</td>
+    <td>{{pe.supplier_ref1.companyname}}</td>
+    <td>{{pe.invoice_no}}</td>
+    <td>{{pe.invoice_amount}}</td>
+    <td>{{pe.tax_amount}}</td>
+    <td>{{pe.grand_total}}</td>
+    <td>{{pe.purchase_date}}</td>
+
+    <td><a href="/del_item/{{item.id}}" class="btn btn-primary "> delete</a></td>
+    <td><a href="/upd_item/{{item.id}}" class="btn btn-secondary "> update</a></td>
+
+  </tr>
+
+
+  {%endfor%}
+</table> <br><br>
+{%else%}
+ <h1>No Purchases info</h1>
+{%endif%}
+</div>
+{%endblock%}

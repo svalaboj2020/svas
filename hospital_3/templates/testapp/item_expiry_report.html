@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{%extends 'testapp/shome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+
+
+<div class="div2"; align="center">
+ <h3>{{title}}  </h3>
+  {%if form%}
+    <form  method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <input type="submit" name="" value="Submit">
+    </form>
+
+  {%endif%}
+  {%if areports %}
+
+   <h5>{{range}}</h5>
+   <table border="2">
+    <thead>
+      <th>item_code</th>
+      <th>item_name</th>
+      <th>print_name</th>
+      <th>companyname</th>
+      <th>BatchNo</th>
+      <th>Mfd_date</th>
+      <th>Exp_date</th>
+      <th>Qty_in</th>
+      <th>Qty_available</th>
+      <th>amount</th>
+      <th>invoice_no</th>
+      <th>supplier</th>
+    </thead>
+    {%for areport in areports%}
+    <tr>
+      <td>{{areport.item_code}}</td>
+      <td>{{areport.item_name}}</td>
+      <td>{{areport.print_name}}</td>
+      <td>{{areport.companyname}}</td>
+      <td>{{areport.BatchNo}}</td>
+      <td>{{areport.Mfd_date}}</td>
+      <td>{{areport.Exp_date}}</td>
+      <td>{{areport.Qty_in}}</td>
+      <td>{{areport.Qty_available}}</td>
+      <td>{{areport.amount}}</td>
+      <td>{{areport.purchase_ref.invoice_no}}</td>
+      <td>{{areport.supplier_ref.companyname}}</td>
+    </tr>
+    {%endfor%}
+
+  </table><br><br>
+     <td><a href="/exp_expiry_rep/{{months}}" class="btn btn-primary "> Export to a file</a></td>
+
+  {%endif%}
+
+  {%if se_reports %}
+    <h3>Balance sheet-sales</h3>
+    <table border="3">
+     <thead>
+      <th>bill_no</th>
+      <th>bill_amount</th>
+      <th>tax_amount</th>
+      <th>grand_total</th>
+      <th>sell_datetime</th>
+      <th>mode_of_payment</th>
+      <th>cash</th>
+      <th>card</th>
+     </thead>
+     {%for se in se_reports%}
+     <tr>
+      <td>{{se.bill_no}}</td>
+      <td>{{se.bill_amount}}</td>
+      <td>{{se.tax_amount}}</td>
+      <td>{{se.grand_total}}</td>
+      <td>{{se.sell_datetime}}</td>
+      <td>{{se.mode_of_payment}}</td>
+      <td>{{se.paid_by_cash}}</td>
+      <td>{{se.paid_by_card}}</td>
+     </tr>
+     {%endfor%}
+
+    </table>
+     <p>Total Sales in INR: {{t_se_grand_total}} &emsp; Total Cash  &#8377;:{{t_se_paid_by_cash}} &emsp; Total Card  &#8377;:{{t_se_paid_by_card}}
+     Total Discount &#8377;:{{t_se_disc_amount}}</p>
+  {%endif%}
+
+  {%if rse_reports %}
+    <h3>Balance sheet-returns</h3>
+    <table border="2">
+     <thead>
+      <th>bill_no</th>
+      <th>rbill_no</th>
+      <th>rbill_amount</th>
+      <th>rbill_tax_amount</th>
+      <th>rbill_grand_total</th>
+      <th>returned_sell_datetime</th>
+      <th>mode_of_payment</th>
+      <th>cash</th>
+      <th>card</th>
+     </thead>
+     {%for rse in rse_reports%}
+     <tr>
+      <td>{{rse.sell_entry_ref__bill_no}}</td>
+      <td>{{rse.rbill_no}}</td>
+      <td>{{rse.rbill_amount}}</td>
+      <td>{{rse.rbill_tax_amount}}</td>
+      <td>{{rse.rbill_grand_total}}</td>
+      <td>{{rse.returned_sell_datetime}}</td>
+      <td>{{rse.mode_of_payment}}</td>
+      <td>{{rse.paid_by_cash}}</td>
+      <td>{{rse.paid_by_card}}</td>
+     </tr>
+     {%endfor%}
+
+    </table>
+    <p>Total Returns in INR: {{t_rse_grand_total}}</p>
+  {%endif%}
+
+    {%if net_balance %}
+      <p style="font-size:24px; color:Blue;">Total Net balance in &#8377;: {{net_balance}}</p>
+    {%endif%}
+
+</div>
+
+
+
+
+
+
+{%endblock%}

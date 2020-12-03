@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{%extends 'testapp/shome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+
+
+<div class="div2"; align="center">
+  <h3>Item Entry List</h3>
+  {%if result %}
+  {{result.contact_name}} <br>
+  {{result.email}} <br>
+  {{result.phone}}
+  {%else%}
+  not created
+  {%endif%}
+  {%if areports %}
+
+  <table border="2">
+    <thead>
+      <th>item_code</th>
+      <th>item_name</th>
+      <th>print_name</th>
+      <th>companyname</th>
+      <th>MRP</th>
+      <th>Mfd_date</th>
+      <th>Exp_date</th>
+      <th>Qty_in</th>
+      <th>supplier_ref</th>
+      <th>amount</th>
+      <th>tax_amount</th>
+      <th>Action</th>
+      <th>Action</th>
+      <th>Action</th>
+
+    </thead>
+    {%for areport in areports%}
+    <tr>
+      <td>{{areport.item_code}}</td>
+      <td>{{areport.item_name}}</td>
+      <td>{{areport.print_name}}</td>
+      <td>{{areport.companyname}}</td>
+      <td>{{areport.MRP}}</td>
+      <td>{{areport.Mfd_date}}</td>
+      <td>{{areport.Exp_date}}</td>
+      <td>{{areport.Qty_in}}</td>
+      <td>{{areport.supplier_ref.companyname}}</td>
+      <td>{{areport.amount}}</td>
+      <td>{{areport.tax_amount}}</td>
+      <td> <a class="btn btn-success" href="/addtoPE/{{areport.id}}" role="button">Add to PE</a></td>
+      <td><a href="/del_ie/{{areport.id}}" class="btn btn-primary "> delete</a></td>
+      <td><a href="/upd_ie/{{areport.id}}" class="btn btn-secondary "> update</a></td
+    </tr>
+    {%endfor%}
+  </table>
+  {%else%}
+  <h1>No report records</h1>
+  {%endif%}
+
+</div>
+
+
+
+
+{%endblock%}

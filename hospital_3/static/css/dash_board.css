@@ -1,0 +1,29 @@
+/* Split the screen in half */
+#id1{
+ border:  3px outset black;
+ background-color: rgba(30, 206, 115, 0.5);
+
+
+}
+#id2{
+ border:  3px outset black;
+ background-color: rgba(62, 97, 214, 0.5);
+
+}
+#id3{
+ border:  3px outset black;
+ background-color: rgb(161, 80, 199);
+ 
+
+}
+.col-sm-4 h3{
+  color: white;
+  text-align: center;
+
+}
+.col-sm-4 {
+
+  height:350px;
+  overflow-y: scroll;
+
+}

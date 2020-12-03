@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{%extends 'testapp/ahome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+<div align="center">
+
+
+<h1>{{title}}</h1>
+{%if error%}
+{{error}}
+{%endif%}
+{%if form%}
+<form  method="post">
+
+  <table >
+    <tr>
+      {%for field in form%}
+      <td>{{ field.label }} &nbsp;&nbsp;</td>
+       <td>{{ field }}</td>
+      {%if forloop.counter|divisibleby:"4" %}
+          <tr>
+      {%endif%}
+      {%endfor%}
+    </tr>
+
+
+
+</table>
+  <br>
+  {%csrf_token%}
+  <input type="submit" button class="btn  btn-success" value= {{title}}>
+</form>
+{%endif%}
+</div>
+
+<div class="div2"; align="center">
+  {%if pe%}
+  <h3>Purchase Entry Details</h3>
+  <table border="2">
+    <thead>
+      <th>companyname</th>
+      <th>invoice_no </th>
+      <th>invoice_amount</th>
+      <th>tax_amount</th>
+      <th>grand_total</th>
+      <th>adjustment</th>
+      <th>status</th>
+      <th>Action</th>
+    </thead>
+
+    <tr>
+      <td>{{pe.supplier_ref1.companyname}}</td>
+      <td>{{pe.invoice_no}}</td>
+      <td>{{pe.invoice_amount}}</td>
+      <td>{{pe.tax_amount}}</td>
+      <td>{{pe.grand_total}}</td>
+      <td>{{pe.adjustment}}</td>
+      <td>{{pe.status}}</td>
+      <td><a href="/addItem1/{{pe.invoice_no}}" class="btn btn-secondary "> Add Item</a></td>
+    </tr>
+
+  </table>
+  <br><br>
+  {%endif%}
+
+
+</div>
+
+
+
+
+{%endblock%}

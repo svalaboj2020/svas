@@ -1,0 +1,1792 @@
+[
+{
+  "model": "testapp.customer_address",
+  "pk": 12,
+  "fields": {
+    "contact_name": "sreenivas",
+    "email": "svalaboj@gmail.com",
+    "phone": "9986534440",
+    "Doctor_name": "pcrao",
+    "hospital_id": "092011"
+  }
+},
+{
+  "model": "testapp.customer_address",
+  "pk": 13,
+  "fields": {
+    "contact_name": "sreenivas",
+    "email": "svalaboj@gmail.com",
+    "phone": "9986534440",
+    "Doctor_name": "pcrao",
+    "hospital_id": "0"
+  }
+},
+{
+  "model": "testapp.customer_address",
+  "pk": 19,
+  "fields": {
+    "contact_name": "sreenivas",
+    "email": "svalaboj@gmail.com",
+    "phone": "9986534440",
+    "Doctor_name": "pcrao",
+    "hospital_id": "2323"
+  }
+},
+{
+  "model": "testapp.customer_address",
+  "pk": 21,
+  "fields": {
+    "contact_name": "Raju",
+    "email": "srre@yahoo.com",
+    "phone": null,
+    "Doctor_name": null,
+    "hospital_id": "0"
+  }
+},
+{
+  "model": "testapp.customer_address",
+  "pk": 22,
+  "fields": {
+    "contact_name": "sreelatha",
+    "email": "svalaboj@gmail.com",
+    "phone": "9986534440",
+    "Doctor_name": "satyanaraya reddy",
+    "hospital_id": "0"
+  }
+},
+{
+  "model": "testapp.customer_address",
+  "pk": 23,
+  "fields": {
+    "contact_name": "sreenivas",
+    "email": "s_valaboj@yahoo.com",
+    "phone": "9986534440",
+    "Doctor_name": null,
+    "hospital_id": "092010"
+  }
+},
+{
+  "model": "testapp.customer_address",
+  "pk": 24,
+  "fields": {
+    "contact_name": "sreenivas",
+    "email": "s_valaboj@yahoo.com",
+    "phone": "9986534440",
+    "Doctor_name": null,
+    "hospital_id": "092010"
+  }
+},
+{
+  "model": "testapp.customer_address",
+  "pk": 25,
+  "fields": {
+    "contact_name": "sree",
+    "email": "s_vas@yahoo.com",
+    "phone": "6666666666",
+    "Doctor_name": "fred",
+    "hospital_id": "092010"
+  }
+},
+{
+  "model": "testapp.customer_address",
+  "pk": 26,
+  "fields": {
+    "contact_name": "sreenivas",
+    "email": "s_valaboj@yahoo.com",
+    "phone": "9986534440",
+    "Doctor_name": "fred",
+    "hospital_id": "092011"
+  }
+},
+{
+  "model": "testapp.supplier_address",
+  "pk": "sreesoft",
+  "fields": {
+    "town": "Pargi",
+    "city": "Parigi",
+    "contact_name": "sreenivas",
+    "email": "svalaboj@gmail.com",
+    "phone": "9986534440"
+  }
+},
+{
+  "model": "testapp.supplier_address",
+  "pk": "sreesoft11",
+  "fields": {
+    "town": "hyderabad",
+    "city": "pargi",
+    "contact_name": "sreenivas",
+    "email": "s_valaboj@yahoo.com",
+    "phone": "9986534440"
+  }
+},
+{
+  "model": "testapp.supplier_address",
+  "pk": "sreesoft3",
+  "fields": {
+    "town": "Pargi",
+    "city": "Parigi",
+    "contact_name": "sreenivas",
+    "email": "svalaboj@gmail.com",
+    "phone": "9986534440"
+  }
+},
+{
+  "model": "testapp.supplier_address",
+  "pk": "srirama",
+  "fields": {
+    "town": "pargi",
+    "city": "pargi",
+    "contact_name": "9986434440",
+    "email": "svalaboj@gmail.com",
+    "phone": "9986534440"
+  }
+},
+{
+  "model": "testapp.purchase_entry",
+  "pk": "10770",
+  "fields": {
+    "purchase_type": "cash",
+    "supplier_ref1": "sreesoft",
+    "invoice_amount": "0.00",
+    "tax_amount": "0.00",
+    "grand_total": "311613.00",
+    "adjustment": "0.00",
+    "purchase_date": "2020-09-28T00:00:00Z",
+    "status": "UN_APPROVED"
+  }
+},
+{
+  "model": "testapp.purchase_entry",
+  "pk": "1111",
+  "fields": {
+    "purchase_type": "cash",
+    "supplier_ref1": "sreesoft",
+    "invoice_amount": "200.00",
+    "tax_amount": "3000.00",
+    "grand_total": "3200.00",
+    "adjustment": "0.00",
+    "purchase_date": null,
+    "status": "UN_APPROVED"
+  }
+},
+{
+  "model": "testapp.purchase_entry",
+  "pk": "1234",
+  "fields": {
+    "purchase_type": "cash",
+    "supplier_ref1": "sreesoft3",
+    "invoice_amount": "12333.00",
+    "tax_amount": "123.00",
+    "grand_total": "12456.00",
+    "adjustment": "0.00",
+    "purchase_date": null,
+    "status": "UN_APPROVED"
+  }
+},
+{
+  "model": "testapp.purchase_entry",
+  "pk": "12345",
+  "fields": {
+    "purchase_type": "credit",
+    "supplier_ref1": "sreesoft",
+    "invoice_amount": "185.00",
+    "tax_amount": "0.00",
+    "grand_total": "185.00",
+    "adjustment": "0.00",
+    "purchase_date": null,
+    "status": "UN_APPROVED"
+  }
+},
+{
+  "model": "testapp.purchase_entry",
+  "pk": "9898",
+  "fields": {
+    "purchase_type": "CREDIT",
+    "supplier_ref1": "sreesoft11",
+    "invoice_amount": "0.00",
+    "tax_amount": "168.00",
+    "grand_total": "168.00",
+    "adjustment": "0.00",
+    "purchase_date": null,
+    "status": "APPROVED"
+  }
+},
+{
+  "model": "testapp.purchase_entry",
+  "pk": "SC03726",
+  "fields": {
+    "purchase_type": "CASH",
+    "supplier_ref1": "sreesoft",
+    "invoice_amount": "148531.00",
+    "tax_amount": "0.00",
+    "grand_total": "148531.00",
+    "adjustment": "-1.20",
+    "purchase_date": null,
+    "status": "APPROVED"
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 45,
+  "fields": {
+    "item_code": "1101",
+    "item_name": "Olmesar",
+    "print_name": "5mg omez",
+    "companyname": "sreesoft",
+    "HSN_code": "22",
+    "tabsPerStrip": 10,
+    "NumStrips": 1,
+    "Mfd_by": null,
+    "MRP": "40.00",
+    "BatchNo": "2333",
+    "Mfd_date": "2020-09-20",
+    "Exp_date": "2021-09-13",
+    "purchase_rate": "30.000",
+    "purchase_cost_per_unit": "3.000",
+    "sell_cost_per_unit": "4.000",
+    "Qty_in": 10,
+    "Qty_available": 106,
+    "Discount_per": "0.000",
+    "disc_amount": "0.00",
+    "tax_percent": "0.180",
+    "tax_amount": "5.40",
+    "amount": "30.00",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft3",
+    "purchase_ref": "1111",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": "H"
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 47,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Omez",
+    "print_name": "20mg omez",
+    "companyname": "sreesoft",
+    "HSN_code": "SRE1111",
+    "tabsPerStrip": 10,
+    "NumStrips": 2,
+    "Mfd_by": "reddylabs",
+    "MRP": "60.00",
+    "BatchNo": "11122",
+    "Mfd_date": "2020-09-12",
+    "Exp_date": "2021-09-13",
+    "purchase_rate": "50.000",
+    "purchase_cost_per_unit": "5.000",
+    "sell_cost_per_unit": "5.085",
+    "Qty_in": 20,
+    "Qty_available": 50,
+    "Discount_per": "0.000",
+    "disc_amount": "0.00",
+    "tax_percent": "0.180",
+    "tax_amount": "18.00",
+    "amount": "100.00",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "1111",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 48,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Dolo",
+    "print_name": "650mg Dolo",
+    "companyname": "sreesoft3",
+    "HSN_code": "sre1111",
+    "tabsPerStrip": 10,
+    "NumStrips": 2,
+    "Mfd_by": "cipla",
+    "MRP": "60.00",
+    "BatchNo": "1234",
+    "Mfd_date": "2020-09-12",
+    "Exp_date": "2022-09-17",
+    "purchase_rate": "0.000",
+    "purchase_cost_per_unit": "0.000",
+    "sell_cost_per_unit": "6.000",
+    "Qty_in": 20,
+    "Qty_available": 48,
+    "Discount_per": "0.000",
+    "disc_amount": "0.00",
+    "tax_percent": "0.180",
+    "tax_amount": "21.60",
+    "amount": "98.40",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft3",
+    "purchase_ref": null,
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": "h"
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 59,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "syringe",
+    "print_name": "5ml syringe",
+    "companyname": "sreesoft",
+    "HSN_code": "90183100",
+    "tabsPerStrip": 1,
+    "NumStrips": 3,
+    "Mfd_by": null,
+    "MRP": "4.02",
+    "BatchNo": "918054ne2",
+    "Mfd_date": "2020-04-01",
+    "Exp_date": "2024-04-01",
+    "purchase_rate": "0.000",
+    "purchase_cost_per_unit": "0.000",
+    "sell_cost_per_unit": "4.020",
+    "Qty_in": 3,
+    "Qty_available": 0,
+    "Discount_per": "0.000",
+    "disc_amount": "0.00",
+    "tax_percent": "0.120",
+    "tax_amount": "1.45",
+    "amount": "10.61",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": null,
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "UN_APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 63,
+  "fields": {
+    "item_code": "111",
+    "item_name": "Remdesivir",
+    "print_name": "Cipremi inj 100mg",
+    "companyname": "sreesoft",
+    "HSN_code": "30049099",
+    "tabsPerStrip": 1,
+    "NumStrips": 82,
+    "Mfd_by": null,
+    "MRP": "4000.00",
+    "BatchNo": "R300008",
+    "Mfd_date": "2020-09-12",
+    "Exp_date": "2020-12-01",
+    "purchase_rate": "3500.000",
+    "purchase_cost_per_unit": "3500.000",
+    "sell_cost_per_unit": "3571.429",
+    "Qty_in": 82,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "8610.00",
+    "tax_percent": "0.120",
+    "tax_amount": "34440.00",
+    "amount": "287000.00",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "10770",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "UN_APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 64,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Gabapin nt",
+    "print_name": "Gabapin nt 100mg t",
+    "companyname": "sreesoft",
+    "HSN_code": "3004",
+    "tabsPerStrip": 1,
+    "NumStrips": 30,
+    "Mfd_by": null,
+    "MRP": "147.00",
+    "BatchNo": "N2001863",
+    "Mfd_date": "2020-09-12",
+    "Exp_date": "2022-06-01",
+    "purchase_rate": "105.000",
+    "purchase_cost_per_unit": "105.000",
+    "sell_cost_per_unit": "131.250",
+    "Qty_in": 30,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "94.50",
+    "tax_percent": "0.120",
+    "tax_amount": "366.66",
+    "amount": "3150.00",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 67,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Thinwes",
+    "print_name": "Thinwes inj",
+    "companyname": "sreesoft",
+    "HSN_code": "30049079",
+    "tabsPerStrip": 1,
+    "NumStrips": 20,
+    "Mfd_by": null,
+    "MRP": "2914.89",
+    "BatchNo": "BA20070",
+    "Mfd_date": "2020-09-12",
+    "Exp_date": "2022-06-17",
+    "purchase_rate": "2082.060",
+    "purchase_cost_per_unit": "2082.060",
+    "sell_cost_per_unit": "2602.580",
+    "Qty_in": 20,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "1249.24",
+    "tax_percent": "0.120",
+    "tax_amount": "4847.04",
+    "amount": "41641.20",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 68,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Relinerve t",
+    "print_name": "Relinerve tab",
+    "companyname": "sreesoft",
+    "HSN_code": "30049099",
+    "tabsPerStrip": 10,
+    "NumStrips": 50,
+    "Mfd_by": "cipla",
+    "MRP": "130.00",
+    "BatchNo": "SRFC-F0007",
+    "Mfd_date": null,
+    "Exp_date": "2022-02-17",
+    "purchase_rate": "92.860",
+    "purchase_cost_per_unit": "9.286",
+    "sell_cost_per_unit": "11.607",
+    "Qty_in": 500,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "139.29",
+    "tax_percent": "0.120",
+    "tax_amount": "540.44",
+    "amount": "4643.00",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 69,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Monocef 1gm inj",
+    "print_name": "Monocef 1gm inj",
+    "companyname": "sreesoft",
+    "HSN_code": "30042019",
+    "tabsPerStrip": 1,
+    "NumStrips": 100,
+    "Mfd_by": null,
+    "MRP": "60.20",
+    "BatchNo": "GB16G100",
+    "Mfd_date": null,
+    "Exp_date": "2022-12-17",
+    "purchase_rate": "43.000",
+    "purchase_cost_per_unit": "43.000",
+    "sell_cost_per_unit": "53.750",
+    "Qty_in": 100,
+    "Qty_available": 96,
+    "Discount_per": "0.030",
+    "disc_amount": "129.00",
+    "tax_percent": "0.120",
+    "tax_amount": "500.52",
+    "amount": "4300.00",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 70,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Meromac 1gm 1nj",
+    "print_name": "Meromac 1gm 1nj",
+    "companyname": "sreesoft",
+    "HSN_code": "30042019",
+    "tabsPerStrip": 1,
+    "NumStrips": 50,
+    "Mfd_by": "cipla",
+    "MRP": "646.00",
+    "BatchNo": "LMZ2034A",
+    "Mfd_date": null,
+    "Exp_date": "2022-04-17",
+    "purchase_rate": "461.430",
+    "purchase_cost_per_unit": "461.430",
+    "sell_cost_per_unit": "576.786",
+    "Qty_in": 50,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "692.14",
+    "tax_percent": "0.120",
+    "tax_amount": "2685.52",
+    "amount": "23071.50",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 71,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Meromac 0.5gm 1nj",
+    "print_name": "Meromac 0.5gm 1nj",
+    "companyname": "sreesoft",
+    "HSN_code": "30042019",
+    "tabsPerStrip": 1,
+    "NumStrips": 50,
+    "Mfd_by": null,
+    "MRP": "383.90",
+    "BatchNo": "LMY2009A",
+    "Mfd_date": null,
+    "Exp_date": "2022-03-17",
+    "purchase_rate": "274.220",
+    "purchase_cost_per_unit": "274.220",
+    "sell_cost_per_unit": "342.768",
+    "Qty_in": 50,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "411.33",
+    "tax_percent": "0.120",
+    "tax_amount": "1595.96",
+    "amount": "13711.00",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 72,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Hoperab",
+    "print_name": "Hoperab dsr cap",
+    "companyname": "sreesoft",
+    "HSN_code": "30049039",
+    "tabsPerStrip": 10,
+    "NumStrips": 50,
+    "Mfd_by": "cipla",
+    "MRP": "119.75",
+    "BatchNo": "PQRAN11",
+    "Mfd_date": null,
+    "Exp_date": "2022-02-17",
+    "purchase_rate": "85.540",
+    "purchase_cost_per_unit": "8.554",
+    "sell_cost_per_unit": "10.692",
+    "Qty_in": 500,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "128.31",
+    "tax_percent": "0.120",
+    "tax_amount": "497.84",
+    "amount": "4277.00",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 73,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Rosuvas",
+    "print_name": "Rosuvas 10mg tab",
+    "companyname": "sreesoft",
+    "HSN_code": "30049099",
+    "tabsPerStrip": 15,
+    "NumStrips": 14,
+    "Mfd_by": null,
+    "MRP": "245.25",
+    "BatchNo": "EMX1391",
+    "Mfd_date": null,
+    "Exp_date": "2022-10-17",
+    "purchase_rate": "175.170",
+    "purchase_cost_per_unit": "11.678",
+    "sell_cost_per_unit": "14.598",
+    "Qty_in": 210,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "73.57",
+    "tax_percent": "0.120",
+    "tax_amount": "285.46",
+    "amount": "2452.38",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 74,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Rosuvas",
+    "print_name": "Rosuvas 20mg tab",
+    "companyname": "sreesoft",
+    "HSN_code": "30049099",
+    "tabsPerStrip": 10,
+    "NumStrips": 20,
+    "Mfd_by": null,
+    "MRP": "330.00",
+    "BatchNo": "EMX1061",
+    "Mfd_date": null,
+    "Exp_date": "2022-10-17",
+    "purchase_rate": "235.720",
+    "purchase_cost_per_unit": "23.572",
+    "sell_cost_per_unit": "29.464",
+    "Qty_in": 200,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "141.43",
+    "tax_percent": "0.120",
+    "tax_amount": "548.76",
+    "amount": "4714.40",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 75,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Rosuvas",
+    "print_name": "Rosuvas 40mg tab",
+    "companyname": "sreesoft",
+    "HSN_code": "30049099",
+    "tabsPerStrip": 10,
+    "NumStrips": 20,
+    "Mfd_by": null,
+    "MRP": "520.00",
+    "BatchNo": "EMX1392",
+    "Mfd_date": null,
+    "Exp_date": "2022-10-17",
+    "purchase_rate": "371.420",
+    "purchase_cost_per_unit": "37.142",
+    "sell_cost_per_unit": "46.429",
+    "Qty_in": 200,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "222.85",
+    "tax_percent": "0.120",
+    "tax_amount": "864.67",
+    "amount": "7428.40",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 76,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Fcnz -iv 100ml",
+    "print_name": "Fcnz -iv 100ml",
+    "companyname": "sreesoft",
+    "HSN_code": "34011911",
+    "tabsPerStrip": 1,
+    "NumStrips": 30,
+    "Mfd_by": null,
+    "MRP": "116.65",
+    "BatchNo": "A9150",
+    "Mfd_date": null,
+    "Exp_date": "2021-04-01",
+    "purchase_rate": "80.000",
+    "purchase_cost_per_unit": "80.000",
+    "sell_cost_per_unit": "104.152",
+    "Qty_in": 30,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "72.00",
+    "tax_percent": "0.120",
+    "tax_amount": "279.36",
+    "amount": "2400.00",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 78,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Met xl 12.5mg tab",
+    "print_name": "Met xl 12.5mg tab",
+    "companyname": "sreesoft",
+    "HSN_code": "30049099",
+    "tabsPerStrip": 20,
+    "NumStrips": 15,
+    "Mfd_by": null,
+    "MRP": "85.50",
+    "BatchNo": "R300008",
+    "Mfd_date": null,
+    "Exp_date": "2022-09-17",
+    "purchase_rate": "61.070",
+    "purchase_cost_per_unit": "3.054",
+    "sell_cost_per_unit": "3.817",
+    "Qty_in": 300,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "27.49",
+    "tax_percent": "0.120",
+    "tax_amount": "106.65",
+    "amount": "916.20",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 79,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Neptro hp vanila 40",
+    "print_name": "Neptro hp vanila 40",
+    "companyname": "sreesoft",
+    "HSN_code": "20169099",
+    "tabsPerStrip": 1,
+    "NumStrips": 3,
+    "Mfd_by": "cipla",
+    "MRP": "955.00",
+    "BatchNo": "15045MN1",
+    "Mfd_date": null,
+    "Exp_date": "2021-09-13",
+    "purchase_rate": "720.000",
+    "purchase_cost_per_unit": "720.000",
+    "sell_cost_per_unit": "809.322",
+    "Qty_in": 3,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "64.80",
+    "tax_percent": "0.180",
+    "tax_amount": "377.14",
+    "amount": "2160.00",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 80,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Orofer fcm 500mg inj",
+    "print_name": "Orofer fcm 500mg inj",
+    "companyname": "sreesoft",
+    "HSN_code": "3004",
+    "tabsPerStrip": 1,
+    "NumStrips": 10,
+    "Mfd_by": "cipla",
+    "MRP": "2688.15",
+    "BatchNo": "ELF8BN9006",
+    "Mfd_date": null,
+    "Exp_date": "2022-05-17",
+    "purchase_rate": "1920.110",
+    "purchase_cost_per_unit": "1920.110",
+    "sell_cost_per_unit": "2400.134",
+    "Qty_in": 10,
+    "Qty_available": 0,
+    "Discount_per": "0.030",
+    "disc_amount": "576.03",
+    "tax_percent": "0.120",
+    "tax_amount": "2235.01",
+    "amount": "19201.10",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 81,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Hifenac mr",
+    "print_name": "Hifenac mr tab",
+    "companyname": "sreesoft",
+    "HSN_code": "3004",
+    "tabsPerStrip": 10,
+    "NumStrips": 50,
+    "Mfd_by": "cipla",
+    "MRP": "71.00",
+    "BatchNo": "K2001140",
+    "Mfd_date": null,
+    "Exp_date": null,
+    "purchase_rate": "50.710",
+    "purchase_cost_per_unit": "5.071",
+    "sell_cost_per_unit": "6.339",
+    "Qty_in": 500,
+    "Qty_available": 498,
+    "Discount_per": "0.030",
+    "disc_amount": "76.06",
+    "tax_percent": "0.120",
+    "tax_amount": "295.13",
+    "amount": "2535.50",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft",
+    "purchase_ref": "SC03726",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": ""
+  }
+},
+{
+  "model": "testapp.item_entry",
+  "pk": 89,
+  "fields": {
+    "item_code": "1100",
+    "item_name": "Monocef-1gm inj",
+    "print_name": "20mg omez",
+    "companyname": "sreesoft11",
+    "HSN_code": "30049022",
+    "tabsPerStrip": 1,
+    "NumStrips": 3,
+    "Mfd_by": "cipla",
+    "MRP": "70.00",
+    "BatchNo": "B016822",
+    "Mfd_date": null,
+    "Exp_date": "2021-02-20",
+    "purchase_rate": "50.000",
+    "purchase_cost_per_unit": "50.000",
+    "sell_cost_per_unit": "62.500",
+    "Qty_in": 3,
+    "Qty_available": 0,
+    "Discount_per": "0.000",
+    "disc_amount": "0.00",
+    "tax_percent": "0.120",
+    "tax_amount": "18.00",
+    "amount": "150.00",
+    "purchased_date": null,
+    "supplier_ref": "sreesoft11",
+    "purchase_ref": "9898",
+    "low_stock_ind_per": "0.30",
+    "low_stock_ind_status": "OFF",
+    "status": "APPROVED",
+    "sch": "H"
+  }
+},
+{
+  "model": "testapp.sell_entry",
+  "pk": 777,
+  "fields": {
+    "customer_address_ptr": 12,
+    "bill_amount": "3.00",
+    "tax_amount": "0.54",
+    "grand_total": "3.54",
+    "sell_datetime": null,
+    "status": "LOCKED",
+    "mode_of_payment": "1",
+    "tx_id_reference": "empty",
+    "card_issued_bank": "empty",
+    "paid_by_cash": "0.00",
+    "paid_by_card": "0.00",
+    "return_cash": "0.00"
+  }
+},
+{
+  "model": "testapp.sell_entry",
+  "pk": 888,
+  "fields": {
+    "customer_address_ptr": 13,
+    "bill_amount": "221.00",
+    "tax_amount": "26.88",
+    "grand_total": "247.88",
+    "sell_datetime": "2020-10-23T21:10:58.856Z",
+    "status": "UNLOCKED",
+    "mode_of_payment": "1",
+    "tx_id_reference": "empty",
+    "card_issued_bank": "empty",
+    "paid_by_cash": "0.00",
+    "paid_by_card": "0.00",
+    "return_cash": "0.00"
+  }
+},
+{
+  "model": "testapp.sell_entry",
+  "pk": 7878,
+  "fields": {
+    "customer_address_ptr": 19,
+    "bill_amount": "0.00",
+    "tax_amount": "0.00",
+    "grand_total": "0.00",
+    "sell_datetime": null,
+    "status": "UNLOCKED",
+    "mode_of_payment": "1",
+    "tx_id_reference": "empty",
+    "card_issued_bank": "empty",
+    "paid_by_cash": "0.00",
+    "paid_by_card": "0.00",
+    "return_cash": "0.00"
+  }
+},
+{
+  "model": "testapp.sell_entry",
+  "pk": 7880,
+  "fields": {
+    "customer_address_ptr": 21,
+    "bill_amount": "60.09",
+    "tax_amount": "7.21",
+    "grand_total": "67.30",
+    "sell_datetime": "2020-10-03T07:40:09.980Z",
+    "status": "LOCKED",
+    "mode_of_payment": "1",
+    "tx_id_reference": "empty",
+    "card_issued_bank": "empty",
+    "paid_by_cash": "0.00",
+    "paid_by_card": "0.00",
+    "return_cash": "0.00"
+  }
+},
+{
+  "model": "testapp.sell_entry",
+  "pk": 7881,
+  "fields": {
+    "customer_address_ptr": 22,
+    "bill_amount": "66.83",
+    "tax_amount": "8.80",
+    "grand_total": "75.63",
+    "sell_datetime": "2020-10-08T16:15:13.963Z",
+    "status": "UNLOCKED",
+    "mode_of_payment": "BOTH",
+    "tx_id_reference": "1234",
+    "card_issued_bank": "sbi",
+    "paid_by_cash": "5.63",
+    "paid_by_card": "70.00",
+    "return_cash": "0.00"
+  }
+},
+{
+  "model": "testapp.sell_entry",
+  "pk": 7882,
+  "fields": {
+    "customer_address_ptr": 26,
+    "bill_amount": "35.08",
+    "tax_amount": "6.31",
+    "grand_total": "41.39",
+    "sell_datetime": "2020-10-18T15:23:21Z",
+    "status": "LOCKED",
+    "mode_of_payment": "BOTH",
+    "tx_id_reference": "3333",
+    "card_issued_bank": "3ssdd",
+    "paid_by_cash": "11.39",
+    "paid_by_card": "30.00",
+    "return_cash": "8.61"
+  }
+},
+{
+  "model": "testapp.returned_sell_entry",
+  "pk": 44,
+  "fields": {
+    "sell_entry_ref": 7881,
+    "rbill_amount": "0.00",
+    "rbill_tax_amount": "0.00",
+    "rbill_grand_total": "0.00",
+    "returned_sell_datetime": "2020-10-24T15:32:28.018Z",
+    "status": "LOCKED",
+    "rmode_of_payment": "CASH",
+    "rtx_id_reference": "empt",
+    "card_issued_bank": "empty",
+    "rpayment_by_cash": "0.00",
+    "rpayment_by_card": "0.00"
+  }
+},
+{
+  "model": "testapp.returned_sell_entry",
+  "pk": 45,
+  "fields": {
+    "sell_entry_ref": 7882,
+    "rbill_amount": "29.08",
+    "rbill_tax_amount": "5.23",
+    "rbill_grand_total": "34.31",
+    "returned_sell_datetime": "2020-10-24T19:53:58.536Z",
+    "status": "LOCKED",
+    "rmode_of_payment": "CASH",
+    "rtx_id_reference": "empt",
+    "card_issued_bank": "empty",
+    "rpayment_by_cash": "34.31",
+    "rpayment_by_card": "0.00"
+  }
+},
+{
+  "model": "testapp.out_item_entry",
+  "pk": 95,
+  "fields": {
+    "bill_no_ref": 888,
+    "BatchNo": "11122",
+    "item_entry_ref": 47,
+    "Qty_sold": 3,
+    "bill_item_amount": "6.00",
+    "bill_tax_amount": "1.08",
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "testapp.out_item_entry",
+  "pk": 101,
+  "fields": {
+    "bill_no_ref": 7880,
+    "BatchNo": "GB16G100",
+    "item_entry_ref": 69,
+    "Qty_sold": 1,
+    "bill_item_amount": "53.75",
+    "bill_tax_amount": "6.45",
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "testapp.out_item_entry",
+  "pk": 102,
+  "fields": {
+    "bill_no_ref": 7880,
+    "BatchNo": "K2001140",
+    "item_entry_ref": 81,
+    "Qty_sold": 1,
+    "bill_item_amount": "6.34",
+    "bill_tax_amount": "0.76",
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "testapp.out_item_entry",
+  "pk": 104,
+  "fields": {
+    "bill_no_ref": 7881,
+    "BatchNo": "11122",
+    "item_entry_ref": 47,
+    "Qty_sold": 1,
+    "bill_item_amount": "5.08",
+    "bill_tax_amount": "0.91",
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "testapp.out_item_entry",
+  "pk": 105,
+  "fields": {
+    "bill_no_ref": 7881,
+    "BatchNo": "2333",
+    "item_entry_ref": 45,
+    "Qty_sold": 2,
+    "bill_item_amount": "8.00",
+    "bill_tax_amount": "1.44",
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "testapp.out_item_entry",
+  "pk": 106,
+  "fields": {
+    "bill_no_ref": 7881,
+    "BatchNo": "GB16G100",
+    "item_entry_ref": 69,
+    "Qty_sold": 1,
+    "bill_item_amount": "53.75",
+    "bill_tax_amount": "6.45",
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "testapp.out_item_entry",
+  "pk": 107,
+  "fields": {
+    "bill_no_ref": 888,
+    "BatchNo": "GB16G100",
+    "item_entry_ref": 69,
+    "Qty_sold": 1,
+    "bill_item_amount": "53.75",
+    "bill_tax_amount": "6.45",
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "testapp.out_item_entry",
+  "pk": 108,
+  "fields": {
+    "bill_no_ref": 888,
+    "BatchNo": "GB16G100",
+    "item_entry_ref": 69,
+    "Qty_sold": 1,
+    "bill_item_amount": "53.75",
+    "bill_tax_amount": "6.45",
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "testapp.out_item_entry",
+  "pk": 109,
+  "fields": {
+    "bill_no_ref": 888,
+    "BatchNo": "GB16G100",
+    "item_entry_ref": 69,
+    "Qty_sold": 1,
+    "bill_item_amount": "53.75",
+    "bill_tax_amount": "6.45",
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "testapp.out_item_entry",
+  "pk": 110,
+  "fields": {
+    "bill_no_ref": 888,
+    "BatchNo": "GB16G100",
+    "item_entry_ref": 69,
+    "Qty_sold": 1,
+    "bill_item_amount": "53.75",
+    "bill_tax_amount": "6.45",
+    "status": "UNLOCKED"
+  }
+},
+{
+  "model": "testapp.out_item_entry",
+  "pk": 114,
+  "fields": {
+    "bill_no_ref": 7882,
+    "BatchNo": "11122",
+    "item_entry_ref": 47,
+    "Qty_sold": 1,
+    "bill_item_amount": "5.08",
+    "bill_tax_amount": "0.91",
+    "status": "LOCKED"
+  }
+},
+{
+  "model": "testapp.out_item_entry",
+  "pk": 115,
+  "fields": {
+    "bill_no_ref": 7882,
+    "BatchNo": "1234",
+    "item_entry_ref": 48,
+    "Qty_sold": 5,
+    "bill_item_amount": "30.00",
+    "bill_tax_amount": "5.40",
+    "status": "LOCKED"
+  }
+},
+{
+  "model": "testapp.returned_out_item_entry",
+  "pk": 115,
+  "fields": {
+    "rbill_no_ref": 44,
+    "BatchNo": "11122",
+    "item_entry_ref1": 47,
+    "Qty_returned": 1,
+    "rbill_item_amount": "5.08",
+    "rbill_tax_amount": "0.91",
+    "status": "LOCKED"
+  }
+},
+{
+  "model": "testapp.returned_out_item_entry",
+  "pk": 116,
+  "fields": {
+    "rbill_no_ref": 44,
+    "BatchNo": "2333",
+    "item_entry_ref1": 45,
+    "Qty_returned": 2,
+    "rbill_item_amount": "8.00",
+    "rbill_tax_amount": "1.44",
+    "status": "LOCKED"
+  }
+},
+{
+  "model": "testapp.returned_out_item_entry",
+  "pk": 119,
+  "fields": {
+    "rbill_no_ref": 45,
+    "BatchNo": "11122",
+    "item_entry_ref1": 47,
+    "Qty_returned": 1,
+    "rbill_item_amount": "5.08",
+    "rbill_tax_amount": "0.91",
+    "status": "LOCKED"
+  }
+},
+{
+  "model": "testapp.returned_out_item_entry",
+  "pk": 120,
+  "fields": {
+    "rbill_no_ref": 45,
+    "BatchNo": "1234",
+    "item_entry_ref1": 48,
+    "Qty_returned": 4,
+    "rbill_item_amount": "24.00",
+    "rbill_tax_amount": "4.32",
+    "status": "LOCKED"
+  }
+},
+{
+  "model": "testapp.staff",
+  "pk": 1,
+  "fields": {
+    "sname": "Raju",
+    "EmpId": 100,
+    "email": "ab@yahoo.com",
+    "phone": 4480792222,
+    "dept": "Pharmacy",
+    "lname": "A001",
+    "role": "Admin"
+  }
+},
+{
+  "model": "testapp.staff",
+  "pk": 2,
+  "fields": {
+    "sname": "Arjun",
+    "EmpId": 200,
+    "email": "ar@yahoo.com",
+    "phone": 9492100221,
+    "dept": "Pharmacy",
+    "lname": "P001",
+    "role": "Pharmacist"
+  }
+},
+{
+  "model": "testapp.staff",
+  "pk": 3,
+  "fields": {
+    "sname": "Sandya",
+    "EmpId": 300,
+    "email": "san@yahoo.com",
+    "phone": 8423412121,
+    "dept": "Receiption",
+    "lname": "R001",
+    "role": "Receiptionist"
+  }
+},
+{
+  "model": "testapp1.registration",
+  "pk": 1,
+  "fields": {
+    "patient_name": "sreenivas",
+    "address": "sainikpuri",
+    "city": "secundrad",
+    "pincode": 501501,
+    "dob": "1972-04-01",
+    "occupation": "engineer",
+    "gender": "MALE",
+    "martial_status": "SINGLE",
+    "nationality": "INDIAN",
+    "email": "svalaboj@gmail.com",
+    "phone": "9986534440",
+    "date_reg": "2020-10-15T17:01:37Z",
+    "reg_validity": "2021-10-15T17:01:37Z",
+    "OPID": "10220"
+  }
+},
+{
+  "model": "testapp1.registration",
+  "pk": 2,
+  "fields": {
+    "patient_name": "rohini",
+    "address": "miyapur",
+    "city": "hyderabad",
+    "pincode": 501501,
+    "dob": "2020-05-01",
+    "occupation": "v",
+    "gender": "FEMALE",
+    "martial_status": "MARRIED",
+    "nationality": "INDIAN",
+    "email": "ritikala20@gmail.com",
+    "phone": "8310342831",
+    "date_reg": "2020-10-24T00:32:29Z",
+    "reg_validity": "2021-10-24T00:32:29Z",
+    "OPID": "10222"
+  }
+},
+{
+  "model": "testapp1.registration",
+  "pk": 3,
+  "fields": {
+    "patient_name": "pranavi",
+    "address": "miyapur",
+    "city": "hyderabad",
+    "pincode": 501501,
+    "dob": "2020-05-01",
+    "occupation": "engineer",
+    "gender": "FEMALE",
+    "martial_status": "SINGLE",
+    "nationality": "INDIAN",
+    "email": "ritikala20@gmail.com",
+    "phone": "8310342831",
+    "date_reg": "2020-10-24T00:32:29Z",
+    "reg_validity": "2021-10-24T00:32:29Z",
+    "OPID": "10221"
+  }
+},
+{
+  "model": "testapp1.bill_entry",
+  "pk": 1,
+  "fields": {
+    "patient_name": "sreenivas",
+    "reg_entry_ref": 1,
+    "admission_type": "OUT_PATIENT",
+    "billed_datetime": null,
+    "billed_amount": "0.00",
+    "billed_by": null,
+    "status": "UN_LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_entry",
+  "pk": 8,
+  "fields": {
+    "patient_name": "sreenivas",
+    "reg_entry_ref": 1,
+    "admission_type": "OUT_PATIENT",
+    "billed_datetime": "2020-10-15T22:58:07.918Z",
+    "billed_amount": "3000.00",
+    "billed_by": "sreenivas",
+    "status": "LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_entry",
+  "pk": 10,
+  "fields": {
+    "patient_name": "sreenivas",
+    "reg_entry_ref": 1,
+    "admission_type": "OUT_PATIENT",
+    "billed_datetime": "2020-10-16T19:58:48.834Z",
+    "billed_amount": "3697.25",
+    "billed_by": "",
+    "status": "LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_entry",
+  "pk": 11,
+  "fields": {
+    "patient_name": "sreenivas",
+    "reg_entry_ref": 1,
+    "admission_type": "OUT_PATIENT",
+    "billed_datetime": "2020-10-16T18:46:35.546Z",
+    "billed_amount": "782.00",
+    "billed_by": "",
+    "status": "LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_entry",
+  "pk": 12,
+  "fields": {
+    "patient_name": "sreenivas",
+    "reg_entry_ref": 1,
+    "admission_type": "OUT_PATIENT",
+    "billed_datetime": "2020-10-16T20:13:36.612Z",
+    "billed_amount": "3000.00",
+    "billed_by": "",
+    "status": "LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_entry",
+  "pk": 13,
+  "fields": {
+    "patient_name": "sreenivas",
+    "reg_entry_ref": 1,
+    "admission_type": "OUT_PATIENT",
+    "billed_datetime": null,
+    "billed_amount": "0.00",
+    "billed_by": null,
+    "status": "UN_LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_entry",
+  "pk": 14,
+  "fields": {
+    "patient_name": "sreenivas",
+    "reg_entry_ref": 1,
+    "admission_type": "OUT_PATIENT",
+    "billed_datetime": "2020-10-23T21:07:27.751Z",
+    "billed_amount": "3000.00",
+    "billed_by": "sreenivas",
+    "status": "LOCKED"
+  }
+},
+{
+  "model": "testapp1.fee_chart",
+  "pk": "Jagesh",
+  "fields": {
+    "dept": "Internal Medicine",
+    "fee": "3000.00",
+    "availability": "Thu to Sun"
+  }
+},
+{
+  "model": "testapp1.fee_chart",
+  "pk": "Ramesh",
+  "fields": {
+    "dept": "Cardiology",
+    "fee": "400.00",
+    "availability": "Mon, Wed, Friday"
+  }
+},
+{
+  "model": "testapp1.fee_chart",
+  "pk": "bhimesh",
+  "fields": {
+    "dept": "Internal Medicine",
+    "fee": "250.00",
+    "availability": "Mon to Wed"
+  }
+},
+{
+  "model": "testapp1.fee_chart",
+  "pk": "manesh",
+  "fields": {
+    "dept": "Diabetic",
+    "fee": "300.00",
+    "availability": "Mon to Sat"
+  }
+},
+{
+  "model": "testapp1.fee_chart",
+  "pk": "somesh",
+  "fields": {
+    "dept": "Neprology",
+    "fee": "350.00",
+    "availability": "Wed"
+  }
+},
+{
+  "model": "testapp1.fee_chart",
+  "pk": "suresh",
+  "fields": {
+    "dept": "Cardio Surgen",
+    "fee": "600.00",
+    "availability": "Tue,Thu,Sat"
+  }
+},
+{
+  "model": "testapp1.lab_chart",
+  "pk": "ANTI SPERM ANTIBODY (ASAB) SERUM",
+  "fields": {
+    "Service_Type": "Investigations",
+    "charge": 850.0,
+    "perc10_Total": 935.0,
+    "perc15": 127.5,
+    "perc15_Total": 977.5
+  }
+},
+{
+  "model": "testapp1.lab_chart",
+  "pk": "BARBITURATES URINE",
+  "fields": {
+    "Service_Type": "Investigations",
+    "charge": 950.0,
+    "perc10_Total": 1045.0,
+    "perc15": 142.5,
+    "perc15_Total": 1092.5
+  }
+},
+{
+  "model": "testapp1.lab_chart",
+  "pk": "BICARBONATE SERUM",
+  "fields": {
+    "Service_Type": "Investigations",
+    "charge": 395.0,
+    "perc10_Total": 434.5,
+    "perc15": 59.25,
+    "perc15_Total": 454.25
+  }
+},
+{
+  "model": "testapp1.lab_chart",
+  "pk": "CARDIOLIPIN ANTIBDIES 1GG SERUM",
+  "fields": {
+    "Service_Type": "Investigations",
+    "charge": 875.0,
+    "perc10_Total": 962.5,
+    "perc15": 131.25,
+    "perc15_Total": 1006.25
+  }
+},
+{
+  "model": "testapp1.lab_chart",
+  "pk": "CARDIOLIPIN ANTIBDIES 1GM SERUM",
+  "fields": {
+    "Service_Type": "Investigations",
+    "charge": 875.0,
+    "perc10_Total": 962.5,
+    "perc15": 131.25,
+    "perc15_Total": 1006.25
+  }
+},
+{
+  "model": "testapp1.lab_chart",
+  "pk": "CHOLORIDE URINE",
+  "fields": {
+    "Service_Type": "Investigations",
+    "charge": 145.0,
+    "perc10_Total": 159.5,
+    "perc15": 21.75,
+    "perc15_Total": 166.75
+  }
+},
+{
+  "model": "testapp1.lab_chart",
+  "pk": "DOPAMIN LEVELS EDTA",
+  "fields": {
+    "Service_Type": "Investigations",
+    "charge": 2000.0,
+    "perc10_Total": 2200.0,
+    "perc15": 300.0,
+    "perc15_Total": 2300.0
+  }
+},
+{
+  "model": "testapp1.lab_chart",
+  "pk": "IONISED CALCIUM SERUM",
+  "fields": {
+    "Service_Type": "Investigations",
+    "charge": 535.0,
+    "perc10_Total": 588.5,
+    "perc15": 80.25,
+    "perc15_Total": 615.25
+  }
+},
+{
+  "model": "testapp1.lab_chart",
+  "pk": "VALPORIC ACID SERUM",
+  "fields": {
+    "Service_Type": "Investigations",
+    "charge": 635.0,
+    "perc10_Total": 698.5,
+    "perc15": 95.25,
+    "perc15_Total": 730.25
+  }
+},
+{
+  "model": "testapp1.bill_item",
+  "pk": 1,
+  "fields": {
+    "patient_name": "sreenivas",
+    "bill_entry_ref": 8,
+    "service_type": "CONSULTATION",
+    "service_name": "Jagesh",
+    "service_amount": "3000.00",
+    "service_tax_amount": "0.00",
+    "visit_type": "WALK_IN",
+    "Ref_by": "None",
+    "status": "UN_LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_item",
+  "pk": 7,
+  "fields": {
+    "patient_name": "sreenivas",
+    "bill_entry_ref": 10,
+    "service_type": "LAB_TESTS",
+    "service_name": "HBA1C",
+    "service_amount": "535.00",
+    "service_tax_amount": "80.25",
+    "visit_type": "WALK_IN",
+    "Ref_by": "None",
+    "status": "UN_LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_item",
+  "pk": 8,
+  "fields": {
+    "patient_name": "sreenivas",
+    "bill_entry_ref": 10,
+    "service_type": "LAB_TESTS",
+    "service_name": "DOPAMIN LEVELS EDTA",
+    "service_amount": "2000.00",
+    "service_tax_amount": "300.00",
+    "visit_type": "WALK_IN",
+    "Ref_by": "None",
+    "status": "UN_LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_item",
+  "pk": 9,
+  "fields": {
+    "patient_name": "sreenivas",
+    "bill_entry_ref": 10,
+    "service_type": "LAB_TESTS",
+    "service_name": "IONISED CALCIUM SERUM",
+    "service_amount": "535.00",
+    "service_tax_amount": "80.25",
+    "visit_type": "WALK_IN",
+    "Ref_by": "None",
+    "status": "UN_LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_item",
+  "pk": 10,
+  "fields": {
+    "patient_name": "sreenivas",
+    "bill_entry_ref": 10,
+    "service_type": "LAB_TESTS",
+    "service_name": "CHOLORIDE URINE",
+    "service_amount": "145.00",
+    "service_tax_amount": "21.75",
+    "visit_type": "WALK_IN",
+    "Ref_by": "None",
+    "status": "UN_LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_item",
+  "pk": 19,
+  "fields": {
+    "patient_name": "sreenivas",
+    "bill_entry_ref": 11,
+    "service_type": "LAB_TESTS",
+    "service_name": "CHOLORIDE URINE",
+    "service_amount": "145.00",
+    "service_tax_amount": "21.75",
+    "visit_type": "WALK_IN",
+    "Ref_by": "None",
+    "status": "UN_LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_item",
+  "pk": 20,
+  "fields": {
+    "patient_name": "sreenivas",
+    "bill_entry_ref": 11,
+    "service_type": "LAB_TESTS",
+    "service_name": "IONISED CALCIUM SERUM",
+    "service_amount": "535.00",
+    "service_tax_amount": "80.25",
+    "visit_type": "WALK_IN",
+    "Ref_by": "None",
+    "status": "UN_LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_item",
+  "pk": 21,
+  "fields": {
+    "patient_name": "sreenivas",
+    "bill_entry_ref": 12,
+    "service_type": "CONSULTATION",
+    "service_name": "Jagesh",
+    "service_amount": "3000.00",
+    "service_tax_amount": "0.00",
+    "visit_type": "WALK_IN",
+    "Ref_by": "None",
+    "status": "UN_LOCKED"
+  }
+},
+{
+  "model": "testapp1.bill_item",
+  "pk": 22,
+  "fields": {
+    "patient_name": "sreenivas",
+    "bill_entry_ref": 14,
+    "service_type": "CONSULTATION",
+    "service_name": "Jagesh",
+    "service_amount": "3000.00",
+    "service_tax_amount": "0.00",
+    "visit_type": "WALK_IN",
+    "Ref_by": "None",
+    "status": "UN_LOCKED"
+  }
+}
+]

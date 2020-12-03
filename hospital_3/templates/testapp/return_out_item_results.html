@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{%extends 'testapp/shome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+
+
+<div class="div2"; align="center">
+
+  {%if result %}
+  {{result.bill_no_ref}} <br>
+  {{result.email}} <br>
+  {{result.phone}}
+  {%else%}
+  not created
+  {%endif%}
+
+
+{%if rse%}
+<h3>Return Sell Entry Details</h3>
+<table border="2">
+  <thead>
+    <th>bill_no</th>
+    <th>bill_amount </th>
+    <th>tax_amount</th>
+    <th>grand_total</th>
+    <th>sell_datetime</th>
+    <th>status</th>
+    <th>mode_of_pay</th>
+    <th>tx_ref</th>
+    <th>bank</th>
+    <th>cash</th>
+    <th>card</th>
+
+  </thead>
+
+  <tr>
+    <td>{{rse.rbill_no}}</td>
+    <td>{{rse.rbill_amount}}</td>
+    <td>{{rse.rbill_tax_amount}}</td>
+    <td>{{rse.rbill_grand_total}}</td>
+    <td>{{rse.returned_sell_datetime}}</td>
+    <td>{{rse.status}}</td>
+    <td>{{rse.rmode_of_payment}}</td>
+    <td>{{rse.rtx_id_reference}}</td>
+    <td>{{rse.card_issued_bank}}</td>
+    <td>{{rse.rpayment_by_cash}}</td>
+    <td>{{rse.rpayment_by_card}}</td>
+
+  </tr>
+</table>
+<br><br>
+{%endif%}
+
+
+
+<h3>Return Out Item Entry List</h3>
+
+
+  {%if areports %}
+
+
+  <table border="2">
+    <thead>
+      <th>rbill_no_ref</th>
+      <th>BatchNo</th>
+      <th>item_entry_ref</th>
+      <th>Qty_returned</th>
+      <th>MRP</th>
+      <th>bill_item_amount</th>
+      <th>bill_tax_amount</th>
+      <th>Action</th>
+
+
+    </thead>
+    {%for areport in areports%}
+    <tr>
+      <td>{{areport.rbill_no_ref}}</td>
+      <td>{{areport.item_entry_ref1.BatchNo}}</td>
+      <td>{{areport.item_entry_ref1}}</td>
+      <td>{{areport.Qty_returned}}</td>
+      <td>{{areport.item_entry_ref1.MRP}}</td>
+      <td>{{areport.rbill_item_amount}}</td>
+      <td>{{areport.rbill_tax_amount}}</td>
+      <!-- <td><a href="/del_oie/{{areport.id}}" class="btn btn-primary "> delete</a></td> -->
+      <!-- <td><a href="/upd_oie/{{areport.id}}" class="btn btn-secondary "> update</a></td> -->
+    </tr>
+    {%endfor%}
+  </table>
+  {%else%}
+  <h1>No report records</h1>
+  {%endif%} <br><br>
+<td> <a class="btn btn-primary " href="/pay_rbill/{{se.bill_no}}" role="button">pay retail Bill</a></td>
+</div>
+
+
+
+
+{%endblock%}

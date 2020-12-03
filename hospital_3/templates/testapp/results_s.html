@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{%extends 'testapp/shome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+
+
+<div class="div2"; align="center">
+  <h3>{{title}}</h3>
+  {%if result %}
+  {{result.contact_name}} <br>
+  {{result.email}} <br>
+  {{result.phone}}
+  {%else%}
+  not created
+  {%endif%}
+
+  {% if sreports%}
+  <table border="2">
+    <thead>
+      <th>companyname</th>
+      <th>town</th>
+      <th>city</th>
+      <th>contact_name</th>
+      <th>email</th>
+      <th>phone</th>
+      <th>Action</th>
+      <th>Action</th>
+
+    </thead>
+    {%for pe in sreports%}
+    <tr>
+      <td>{{pe.companyname}}</td>
+      <td>{{pe.town}}</td>
+      <td>{{pe.city}}</td>
+      <td>{{pe.contact_name}}</td>
+      <td>{{pe.email}}</td>
+      <td>{{pe.phone}}</td>
+      <td><a href="/del_sup/{{pe.companyname}}" class="btn btn-primary "> delete</a></td>
+      <td><a href="/upd_sup/{{pe.companyname}}" class="btn btn-secondary "> update</a></td>
+
+    </tr>
+
+
+    {%endfor%}
+  </table> <br><br>
+  {%else%}
+   <h1>No Purchases info</h1>
+  {%endif%}
+
+  {% if creports%}
+  <table border="2">
+    <thead>
+      <th>contact_name</th>
+      <th>email</th>
+      <th>phone</th>
+      <th>Doctor_name</th>
+      <th>Hospital ID</th>
+
+
+    </thead>
+    {%for pe in creports%}
+    <tr>
+      <td>{{pe.contact_name}}</td>
+      <td>{{pe.email}}</td>
+      <td>{{pe.phone}}</td>
+      <td>{{pe.Doctor_name}}</td>
+      <td>{{pe.email}}</td>
+      <td><a href="/del_cus/{{pe.id}}" class="btn btn-primary "> delete</a></td>
+      <td><a href="/upd_cus/{{pe.id}}" class="btn btn-secondary "> update</a></td>
+
+    </tr>
+
+
+    {%endfor%}
+  </table> <br><br>
+  {%else%}
+   <h1>No Purchases info</h1>
+  {%endif%}
+</div>
+
+
+
+
+
+
+
+
+
+
+{%endblock%}

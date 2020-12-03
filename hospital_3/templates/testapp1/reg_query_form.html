@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{%extends 'testapp1/rhome.html' %}
+{%load static%}
+{%block grand_child_block%}
+<link rel="stylesheet" href="{% static "css/reg_form.css"%}">
+<div class="" align="center">
+
+
+    <h2>Registration Query Form</h2> <br><br>
+    <form  method="post">
+      {%csrf_token%}
+      <select class="" name="query_option">
+        <option value="by_name" > SearchByName</option>
+        <option value="by_OPID"> SearchByID</option>
+        <option value="by_phone"  selected>SearchByPhone</option>
+      </select>
+      <input type="text" name="search_word" value="" placeholder="Enter name or OPID or phone_no">
+      <input type="submit" class="btn btn-secondary" name="" value="Search">
+
+    </form> <br><br>
+    {%if results%}
+    <h4>Results</h4>
+    <table border="2">
+      <thead>
+        <th>Patient Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>D.O.B</th>
+        <th>Occupation</th>
+      <th>Gender</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Reg.Date</th>
+    <th>OPID</th>
+    <th>ID</th>
+    <th>Action</th>
+    <th>Action</th>
+    <th>Action</th>
+    </thead>
+      {%for result in results%}
+      <tr>
+        <td>{{result.patient_name|title}}</td>
+        <td>{{result.address|title}}</td>
+        <td>{{result.city|title}}</td>
+        <td>{{result.dob}}</td>
+        <td>{{result.occupation|title}}</td>
+        <td>{{result.gender|title}}</td>
+        <td>{{result.email}}</td>
+        <td>{{result.phone}}</td>
+        <td>{{result.date_reg}}</td>
+        <td>{{result.OPID}}</td>
+        <td>{{result.id}}</td>
+        <!-- <td><a href="/sel_doc/{{result.id}}" class="btn btn-primary "> doc Billing</a></td>
+        <td><a href="/sel_lab/{{result.id}}" class="btn btn-primary "> lab Billing</a></td> -->
+        <td><a href="/create_Bill_Register/{{result.id}}" class="btn btn-primary "> create Bill</a></td>
+        <td><a href="/appt_m/{{result.OPID}}" class="btn btn-primary "> Make Apptmnt</a></td>
+        <td><a href="/bill_hist/{{result.OPID}}" class="btn btn-primary "> Last Bills hist</a></td>
+      </tr>
+      {%endfor%}
+    </table>
+    {%else%}
+    <h3>No report records</h3>
+
+
+    {%endif%}
+  </div>
+{%endblock%}

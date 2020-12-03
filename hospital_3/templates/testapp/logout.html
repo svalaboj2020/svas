@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html'%}
+
+{%load static%}
+{%block child_block%}
+<link rel="stylesheet" href="{%static "css/home_c.css"%}">
+<link rel="stylesheet" href="{%static "css/logout.css"%}">
+<!-- <div class="jumbotron"> -->
+  <div class="container1" align="center">
+    <h2>Thanks for visiting our website</h2>
+    <h3>to login again click below </h3>
+    <a class='btn btn-primary btn-success btn-lg' href="/accounts/login">Login</a>
+
+  </div>
+
+<!-- </div> -->
+{%endblock%}

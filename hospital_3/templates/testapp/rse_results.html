@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{%extends 'testapp/shome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+
+<div class="div2"; align="center">
+  {{title}}
+  {{message}}
+{%if se%}
+<div class="class1"; align="center">
+  <h3> Sell_Entry</h3>
+<table border="2">
+  <thead>
+    <th>bill_no</th>
+    <th>bill_amount</th>
+    <th>tax_amount</th>
+    <th>grand_total</th>
+    <th>sell_datetime</th>
+    <th>mode_of_payment</th>
+    <th>status</th>
+    <th>paid_by_cash</th>
+    <th>paid_by_card</th>
+    <th>discount_amount</th>
+
+  </thead>
+
+  <tr>
+    <td>{{se.bill_no}}</td>
+    <td>{{se.bill_amount}}</td>
+    <td>{{se.tax_amount}}</td>
+    <td>{{se.grand_total}}</td>
+    <td>{{se.sell_datetime}}</td>
+    <td>{{se.mode_of_payment}}</td>
+    <td>{{se.status}}</td>
+    <td>{{se.paid_by_cash}}</td>
+    <td>{{se.paid_by_card}}</td>
+    <td>{{se.discount_amount}}</td>
+
+  </tr>
+</table>
+</div>
+
+
+{%endif%}
+
+{%if rse%}
+<div class="class2"; align="center">
+  <h3> Return sell Entry </h3>
+<table border="2">
+  <thead>
+    <th>sell_entry_ref</th>
+    <th>rbill_no</th>
+    <th>rbill_amount</th>
+    <th>rbill_tax_amount</th>
+    <th>rbill_grand_total</th>
+    <th>returned_sell_datetime</th>
+    <th>status</th>
+    <th>rmode_of_payment</th>
+    <th>rpayment_by_cash</th>
+    <th>rpayment_by_card</th>
+  </thead>
+
+  <tr>
+    <td>{{rse.sell_entry_ref}}</td>
+    <td>{{rse.rbill_no}}</td>
+    <td>{{rse.rbill_amount}}</td>
+    <td>{{rse.rbill_tax_amount}}</td>
+    <td>{{rse.rbill_grand_total}}</td>
+    <td>{{rse.returned_sell_datetime}}</td>
+    <td>{{rse.status}}</td>
+    <td>{{rse.rmode_of_payment}}</td>
+    <td>{{rse.rpayment_by_cash}}</td>
+    <td>{{rse.rpayment_by_card}}</td>
+  </tr>
+</table>
+</div>
+{%endif%}
+
+  {%if areports %}
+  <div class="class3"; align="center">
+    <h3> Out Item Entry List </h3>
+  <table border="2">
+    <thead>
+      <th>bill_no_ref</th>
+      <th>BatchNo</th>
+      <th>item_entry_ref</th>
+      <th>Qty_sold</th>
+      <th>bill_item_amount</th>
+      <th>bill_tax_amount</th>
+      <th>Action</th>
+      <!-- <th>Action</th> -->
+    </thead>
+
+    {%for areport in areports%}
+    <tr>
+      <td>{{areport.bill_no_ref}}</td>
+      <td>{{areport.BatchNo}}</td>
+      <td>{{areport.item_entry_ref}}</td>
+      <td>{{areport.Qty_sold}}</td>
+      <td>{{areport.bill_item_amount}}</td>
+      <td>{{areport.bill_tax_amount}}</td>
+      <td> <a class="btn btn-success" href="/retOIE/{{areport.id}}/{{areport.bill_no_ref.bill_no}}/{{rse.rbill_no}}" role="button">Return Item</a></td>
+      <!-- <td> <a class="btn btn-success" href="/oie_list/{{areport.bill_no}}" role="button">List Out IE</a></td> -->
+    </tr>
+    {%endfor%}
+  </table>
+    {% if roie_reports%}
+    <table border="2">
+      <thead>
+        <th>rbill_no_ref</th>
+        <th>BatchNo</th>
+        <th>item_entry_ref</th>
+        <th>Qty_returned</th>
+        <th>MRP</th>
+        <th>bill_item_amount</th>
+        <th>bill_tax_amount</th>
+        <th>Action</th>
+
+
+      </thead>
+      {%for areport in roie_reports%}
+      <tr>
+        <td>{{areport.rbill_no_ref}}</td>
+        <td>{{areport.item_entry_ref1.BatchNo}}</td>
+        <td>{{areport.item_entry_ref1}}</td>
+        <td>{{areport.Qty_returned}}</td>
+        <td>{{areport.item_entry_ref1.MRP}}</td>
+        <td>{{areport.rbill_item_amount}}</td>
+        <td>{{areport.rbill_tax_amount}}</td>
+
+      </tr>
+      {%endfor%}
+    </table>
+    {%endif%}
+
+
+
+  {%else%}
+  <h1>No report records</h1>
+  {%endif%}
+</div>
+
+</div>
+
+
+{%endblock%}

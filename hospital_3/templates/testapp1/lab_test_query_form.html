@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{%include 'testapp1/rhome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+    integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <div class="" align="center">
+    <h1>Lab Service Query Form</h1>
+    <h3></h3>
+    <form  method="post">
+      {%csrf_token%}
+      {{form}}
+      <input type="submit" name="" value="Search">
+    </form> <br><br>
+
+
+        <a href="#";class="btn btn-primary "></a>
+
+
+    {%if results%}
+      <table border="1">
+      <thead>
+        <th>Service_Type</th>
+        <th>Service_Name</th>
+        <th>Total Incl Tax</th>
+        <th>Tax</th>
+        <th>Action</th>
+
+      </thead>
+      {%for result in results%}
+        <tr>
+          <td>{{result.Service_Type}}</td>
+          <td>{{result.Service_Name}}</td>
+          <td>{{result.perc15_Total}}</td>
+          <td>{{result.perc15}}</td>
+          <!-- <td><a href="/generate_lab_bill/{{result.Service_Name}}/{{id}}/{{bill_no}}" class="btn btn-success "> generate_lab_bill</a></td> -->
+        <!-- <td><a href="/generate_doctemp/{{result.doctor_name}}/{{id}}" class="btn btn-success "> generate_doctemp</a></td> -->
+          <td><a href="/add_test_to_session/{{result.Service_Name}}/{{bill_no}}" class="btn btn-primary "> add test to session</a></td>
+
+        </tr>
+        {%endfor%}
+    </table>
+
+
+    {%endif%}
+    {%if bireports%}
+    <h3> created bill items</h3>
+
+      <table border="1">
+      <thead>
+        <th>service_type</th>
+        <th>service_name</th>
+        <th>service_amount</th>
+        <th>service_tax_amount</th>
+        <!-- <th>Action</th> -->
+
+      </thead>
+      {%for bi in bireports%}
+        <tr>
+          <td>{{bi.service_type}}</td>
+          <td>{{bi.service_name}}</td>
+          <td>{{bi.service_amount}}</td>
+          <td>{{bi.service_tax_amount}}</td>
+          <!-- <td><a href="/del_bill_item/{{bi.id}}/{{bill_no}}" class="btn btn-primary "> del bill item</a></td> -->
+
+        </tr>
+        {%endfor%}
+    </table>
+
+
+    {%endif%}
+
+    <h5>selected tests</h5>
+    {{r_id}}
+
+    <table border="1">
+
+        {%for r in r_lab_test_list%}
+      <tr>
+      <td>{{r}}</td>
+      <td><a href="/del_test_from_session/{{r}}/{{bill_no}}" class="btn btn-primary "> delete test from session</a></td>
+
+      </tr>
+        {%endfor%}
+    </table>
+    <td><a href="/generate_lab_bill1/{{id}}/{{bill_no}}" class="btn btn-primary "> GenerateBillLabTests</a></td>
+
+    </div>
+
+    <script type="text/javascript">
+    $("#id_test_name").click(function()
+    {
+      alert('hiilll');
+    var abc=[
+      'IONISED CALCIUM SERUM',
+      'DOPAMIN LEVELS EDTA',
+      'ANTI SPERM ANTIBODY (ASAB) SERUM',
+      'CHOLORIDE URINE',
+      'CARDIOLIPIN ANTIBDIES 1GG SERUM',
+      'CARDIOLIPIN ANTIBDIES 1GM SERUM',
+      'BARBITURATES URINE',
+      'VALPORIC ACID SERUM',
+      'BICARBONATE SERUM',
+      'HbA1C', ];
+    $(this).autocomplete({
+
+      source:abc
+    },
+    {
+    autofocus:true,
+    minLength:1,
+    });
+    });
+    </script>
+{%endblock%}

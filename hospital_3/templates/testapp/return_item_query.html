@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+{%extends 'testapp/shome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+<div class="class1"; align="center">
+
+
+<h1>{{title}}</h1>
+
+</div>
+<hr>
+<div  align="center">
+  {%if request.session1%}
+  <table border="2">
+    <thead>
+      <th>Item Name</th>
+      <th>quantity</th>
+      <th>Action</th>
+      <th>Update</th>
+    </thead>
+    {%for k,v in request.session.items%}
+    <tr>
+      <td>{{k}}</td>
+      <td>{{v}}</td>
+      <td><a href="/delitem/{{k}}" class="btn btn-primary "> delete</a></td>
+      <td><a href="/upditem/{{k}}" class="btn btn-secondary "> update</a></td>
+
+    </tr>
+    {%endfor%}
+  </table>
+
+
+  {%else%}
+  <h3>No session infomation </h3>
+  {%endif%}
+  xxxxxxxxxx
+  {%if rse%}
+  xxxxxxxxxx{{rse.rbill_no}}
+  {%endif%}
+<h3> out item entries </h3>
+{%if roie_areports%}
+rbill=request.session['rbill_no']
+{%endif%}
+
+<p>Rbill no: {{xxx}}</p>
+
+{%if oareports%}
+<table border="2">
+  <thead>
+    <th>bill_no_ref</th>
+    <th>BatchNo</th>
+    <th>item_entry_ref</th>
+    <th>Qty_sold</th>
+    <th>MRP</th>
+    <th>bill_item_amount</th>
+    <th>bill_tax_amount</th>
+    <th>OIE_id</th>
+
+    <th>Action</th>
+
+  </thead>
+  {%for oareport in oareports%}
+  <tr>
+    <td>{{oareport.bill_no_ref}}</td>
+    <td>{{oareport.item_entry_ref.BatchNo}}</td>
+    <td>{{oareport.item_entry_ref}}</td>
+    <td>{{oareport.Qty_sold}}</td>
+    <td>{{oareport.item_entry_ref.MRP}}</td>
+    <td>{{oareport.bill_item_amount}}</td>
+    <td>{{oareport.bill_tax_amount}}</td>
+    <td>{{oareport.id}}</td>
+
+    <td> <a class="btn btn-success" href="/retOIE/{{oareport.id}}/{{oareport.bill_no_ref.bill_no}}/{{xxx}}" role="button">Return Item</a></td>
+
+
+  </tr>
+  {%endfor%}
+</table>
+{%else%}
+<h1>No report records</h1>
+{%endif%}
+<!-- <td> <a class="btn btn-success " href="/generate_rbill/{{bill_no}}" role="button">generate retail Bill</a></td> -->
+</div>
+
+<hr>
+
+<div  align="center">
+<h3>Form</h3>
+
+<form  method="post">
+  {%if form%}
+    {{form}}
+  {%csrf_token%}
+  <input type="submit" button class="btn  btn-success" value= {{title}}>
+  {%endif%}
+</form>
+
+<br><br>
+{%if msg%}
+ {{msg}}
+
+{%endif%}
+
+{%if roie_areports%}
+<h3>returned Out Item Entries</h3>
+<table border="2">
+  <thead>
+    <th>rbill_no_ref</th>
+    <th>BatchNo</th>
+    <th>item_entry_ref1</th>
+    <th>Qty_returned</th>
+    <th>rbill_item_amount</th>
+    <th>rbill_tax_amount</th>
+    <th>roie_id</th>
+    <th>status</th>
+    <th>Action</th>
+  </thead>
+  {%for areport in roie_areports%}
+  <tr>
+    <td>{{areport.rbill_no_ref}}</td>
+    <td>{{areport.BatchNo}}</td>
+    <td>{{areport.item_entry_ref1}}</td>
+    <td>{{areport.Qty_returned}}</td>
+    <td>{{areport.rbill_item_amount}}</td>
+    <td>{{areport.rbill_tax_amount}}</td>
+    <td>{{areport.id}}</td>
+    <td>{{areport.status}}</td>
+    {%if areport.status == "UNLOCKED" %}
+    <td> <a class="btn btn-success" href="/del_roie/{{areport.id}}" role="button">Delete ROIE</a></td>
+    {%endif %}
+      </tr>
+  {%endfor%}
+</table>
+{%endif%}
+ <a class="btn btn-success" href="/generate_return_rbill/{{xxx}}" role="button">confirm Return Bill</a>
+</div>
+
+
+{%endblock%}

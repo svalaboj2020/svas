@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <style type="text/css">
+            body {
+                font-weight: 200;
+                font-size: 14px;
+            }
+            .header {
+                font-size: 20px;
+                font-weight: 100;
+                text-align: center;
+                color: #007cae;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 100;
+               /* text-align: right;*/
+               padding: 10px 20px 0px 20px;
+            }
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                padding: 10px 20px 0px 20px;
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+          span{
+            padding-left: 10px
+
+          }
+          #tab1{
+            border-style:dotted;
+          }
+        </style>
+
+
+    </head>
+    <body>
+    <div class='wrapper'>
+            <div class='header'>
+                <p class='title'>Lab Tests Bill Receipt </p>
+            </div>
+
+
+            <table  >
+              <thead >
+                <td  style="width:50%,"; > Sri Sai Nursing home <br>121/C Eswaripuri colony,Sainikpuri, <br> Secundrabad
+                Ph:040-23704322; <br>Email:srisai@admin@gmail.com
+
+              </td>
+                <td style="width:10%"; align="left">
+                  Pt Name: <br>
+                  Date: <br>
+                  BillNo:  <br>
+                  Payment:
+                </td>
+                <td style="width:20%"; align="left">
+                  {{reg.patient_name|upper}}<br>
+                  {{Created_Dt|date:"d M"}} {{Created_Dt|time:"P"}}<br>
+                  {{bill_no}} <br>
+                  {{mode_of_payment}}
+                </td>
+
+                <td style="width:20%";align="left">
+                  Hospital ID:{{reg.OPID}} <br>
+                  Ph #:{{reg.phone}}<br>
+                  <br>
+                  <br>
+                </td>
+
+                <td>
+                  <br>
+                  <br>
+
+                </td>
+              </thead>
+            </table>
+
+
+          <hr class='hrItem' />
+        <div class="Regdetails">
+          <table align="center">
+            <tr>
+              <td style="width:15%">Ref By:</td>
+              <td style="width:35%">{{Ref_by}} </td>
+              <td style="width:15%"> Consultant:</td>
+              <td style="width:35%">{{bi.doctor_name|title}}<br></td>
+            </tr>
+          </table> <br>
+
+          <table >
+            <thead>
+              <th style="width:10%"; align="left">S.No</th>
+              <th style="width:50%"; align="left">Test Name</th>
+              <th style="width:20%"; align="left">Charge</th>
+              <th style="width:20%"; align="left">Tax</th>
+            </thead>
+
+            {%for areport in bireports%}
+              <tr>
+              <td>{{forloop.counter}}</td>
+              <td>{{areport.service_name}}</td>
+              <td>{{areport.service_amount}}</td>
+              <td>{{areport.service_tax_amount}}</td>
+            </tr>
+            {%endfor%}
+          </table>
+
+            <p align="left">Recieved an amount of {{t_grand_total}} Rupees from {{reg.patient_name|title}} <br>
+             In Words : {{amountInWord|title}} Rupees only </p> <br>
+
+
+          <table align="center">
+            <tr>
+              <td style="width:50%">Created by:{{username}} <br>
+              Created Dt: {{Created_Dt}}</td>
+
+              <td>Print by:{{username}}  <br>
+                 Print Dt:{{Print_Dt}}<br>
+              </td>
+            </tr>
+          </table>
+
+        </div>
+
+      <table>
+        <td>*****"Checks are subject to realisation"  </td>
+        <td align='center'>Authorized Signature [{{username}}]</td>
+      </table>
+
+      <hr class='hrItem' />
+
+
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{%extends 'testapp1/rhome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+
+<div class="div2"; align="center">
+  {{title}}
+  {%if areports %}
+
+  <table border="2">
+    <thead>
+      <th>patient_name</th>
+      <!-- <th>email</th> -->
+      <th>phone</th>
+      <th>bill_no</th>
+      <th>bill_amount</th>
+      <th>adm_type</th>
+      <th>mode_of_pay</th>
+      <th>paid_by_cash</th>
+      <th>paid_by_card</th>
+      <th>billed_datetime</th>
+      <th>status</th>
+      <th>Action</th>
+      <th>Action</th>
+      <th>Action</th>
+      <th>Action</th>
+
+    </thead>
+
+
+    {%for areport in areports%}
+
+    <tr>
+      <td>{{areport.patient_name}}</td>
+      <!-- <td>{{areport.email}}</td> -->
+      <td>{{areport.phone}}</td>
+      <td>{{areport.bill_no}}</td>
+      <td>{{areport.billed_amount}}</td>
+      <td>{{areport.admission_type}}</td>
+      <td>{{areport.mode_of_payment}}</td>
+      <td>{{areport.paid_by_cash}}</td>
+      <td>{{areport.paid_by_card}}</td>
+      <th>{{areport.billed_datetime |date:"d M"}} {{areport.billed_datetime |time:"P"}}</th>
+      <td>{{areport.status}}</td>
+      <!-- <td> <a class="btn btn-success" href="generate_return_rbill/{{areport.id}}/{{areport.reg_entry_ref.}}/{{areport.bill_no}}" role="button">generate_bill</a></td> -->
+      <td> <a class="btn btn-success" href="/bi_list/{{areport.bill_no}}" role="button">List bill item</a></td>
+      {%if areport.status == 'UN_LOCKED' %}
+      <td> <a class="btn btn-primary" href="/bi_add/{{areport.bill_no}}" role="button">Add bill item</a></td>
+      {%else%}
+      <td></td>
+      {%endif%}
+      {%if areport.status == 'UN_LOCKED' %}
+      <td> <a class="btn btn-success" href="/pay_bill1/{{areport.bill_no}}" role="button">Pay Bill</a></td>
+      {%else%}
+      <td></td>
+      {%endif%}
+      <td> <a class="btn btn-primary" href="/generate_doc_lab_receipt1/{{areport.bill_no}}" role="button">Print Bill</a></td>
+    </tr>
+
+
+    {%endfor%}
+  </table>
+  {%else%}
+  <h1>No report records</h1>
+  {%endif%}
+
+</div>
+
+
+{%endblock%}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <style type="text/css">
+            body {
+                font-weight: 200;
+                font-size: 14px;
+            }
+            .header {
+                font-size: 20px;
+                font-weight: 100;
+                text-align: center;
+                color: #007cae;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 100;
+               /* text-align: right;*/
+               padding: 10px 20px 0px 20px;
+            }
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                padding: 10px 20px 0px 20px;
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+          span{
+            padding-left: 10px
+            tex
+          }
+        </style>
+
+
+    </head>
+    <body>
+    <div class='wrapper'>
+            <div class='header'>
+                <p class='title'>Retail Bill </p>
+            </div>
+
+            <table >
+              <thead>
+                <td  style="width:60%"; > Sri Sai Medical & General Stores <br>121/C Eswaripuri colony,Sainikpuri, <br> Secundrabad
+                Ph:040-23704322; <br>Email:srisai@admin@gmail.com
+                 <br>GST.No 36AASTS7437D1ZH <br> D.L.No 89/HD/AP/99-R.R.S
+              </td>
+                <td style="width:15%"; align="left"> Patient Name: <br>
+                  Doctor Name: <br>
+                  Date: <br>
+                  BillNo:  <br>
+                  Hospital ID:<br>
+                  Admn No: <br>
+                  Payment:<br>
+                </td>
+                <td style="width:25%";align="left"> {{se.contact_name|upper}} <br>
+                  {{se.Doctor_name|title}} <br>
+                  {{se.sell_datetime|date:"D d M y"}} {{se.sell_datetime|time:" P"}} <br>
+                   {{se.bill_no}} <br>
+                   {{se.hospital_id}}<br>
+                   <br>
+                  {{se.mode_of_payment}}
+                </td>
+              </thead>
+
+
+            </table>
+        <!-- <table align="center">
+          <thead >
+            <th align="left">Patient Name</th>
+            <th align="left">Doctor Name</th>
+            <th align="left">Grand Amount</th>
+            <th align="left">Date</th>
+            <th align="left">BillNo</th>
+          </thead>
+
+          <tr>
+            <td>{{se.contact_name|upper}}</td>
+            <td>{{se.Doctor_name|title}}</td>
+            <td ><strong>{{se.grand_total}}</strong></td>
+            <td>{{se.sell_datetime|date:" d M y"}} {{se.sell_datetime|time:"h:i p"}}</td>
+            <td>{{se.bill_no}}</td>
+          </tr>
+
+        </table> -->
+        <hr class='hrItem' />
+              <table>
+                <thead >
+                  <th align="left" style="width:15%";>Item</th>
+                  <th align="left" ;>HSN code</th>
+                  <th align="left" ;>Mfg</th>
+                  <th align="left" ;>Batch <br> No</th>
+                  <th align="right" ;>Exp <br>date</th>
+                  <th align="right">Qty</th>
+                  <th align="right">Rate</th>
+                  <th align="right">Taxabl<br> Amt</th>
+                  <th align="center">Tax <br>Per</th>
+
+                  <th align="center">CGST <br>Amt</th>
+                  <th align="center">SGST <br>Amt</th>
+                  <th align="right">Billed <br>Amt</th>
+                </thead>
+              </table>
+          <hr class='hrItem' />
+        <div class="billdetails">
+          <table align="center">
+            <!-- <thead >
+              <th align="left">Item</th>
+              <th align="left">Quatity</th>
+              <th align="left">MRP</th>
+              <th align="left">Amount</th>
+              <th align="left">Tax Amount</th>
+            </thead> -->
+
+            {%for areport in areports%}
+
+            <tr>
+              <td style="width:15%;font-size:9px;">{{areport.item_entry_ref.item_name|upper}}</td>
+              <td style="font-size:10px;">{{areport.item_entry_ref.HSN_code}}</td>
+              <td style="font-size:10px;">{{areport.item_entry_ref.Mfd_by}}</td>
+              <td style="font-size:10px;">{{areport.item_entry_ref.BatchNo}}</td>
+              <td align="right";>{{areport.item_entry_ref.Exp_date|date:"M y"}}</td>
+              <td align="right";>{{areport.Qty_sold}}</td>
+              <td align="right";>{{areport.item_entry_ref.sell_cost_per_unit|floatformat:2 }}</td>
+              <td align="right";>{{areport.bill_item_amount|floatformat:2}}</td>
+              <td align="center";>{{areport.item_entry_ref.tax_percent|floatformat:2}}</td>
+
+              <td align="center";>{{areport.CGST_tax_amount|floatformat:2}}</td>
+              <td align="center";>{{areport.SGST_tax_amount|floatformat:2}}</td>
+              <td align="right";>{{areport.billed_amount|floatformat:2}}</td>
+            </tr>
+            {%endfor%}
+          </table>
+          <hr class='hrItem' />
+          <table align="center">
+            <!-- <thead >
+              <th align="left">Items</th>
+              <th align="left">Quantity</th>
+              <th align="left">Grand Total</th>
+              <th align="left">Total Amount</th>
+              <th align="left">Total tax</th>
+
+            </thead> -->
+
+            <tr>
+              <td style="width:15%">{{ie_count}}</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td align="right";></td>
+              <td align="right";>{{ie_Qty_in}}</td>
+              <td align="center";>-</td>
+              <td align="right";>{{ie_sum}}</td>
+              <td align="center";>-</td>
+              <td align="center";>{{ie_cgst_total}}</td>
+              <td align="center";>{{ie_sgst_total}}</td>
+              <td align="right";>{{ie_grand_total}}</td>
+            </tr>
+
+          </table> <br><br>
+          <table>
+            <tr>
+              <td >Total Rs:{{se.grand_total}} </td>
+              {%if se.discount_amount %}
+              <td>  Discount Rs:{{se.discount_amount}}</td>
+              {%else%}
+              <td></td>
+              {%endif%}
+              <td style="font-size:110%";><strong>Pay Bill Rs:<span style="color:blue;font-size:160%">{{net_payment}}</strong></span></td>
+            </tr>
+          </table>
+        </div> <br><br><br><br><br>
+
+      <table>
+        <tr>
+        <td> </td>
+        <td align='center'>Pharmacist [{{username}}]</td>
+        </tr>
+        <tr>
+          <td><small>Note:"Drugs once sold will not be taken back or exchanged" </small></td>
+          <td align='center'><small>computer generated bill no signature is needed</small></td>
+        </tr>
+      </table>
+
+      <hr class='hrItem' />
+
+
+    </div>
+    </body>
+
+</html>

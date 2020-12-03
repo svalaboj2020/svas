@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <style type="text/css">
+            body {
+                font-weight: 200;
+                font-size: 14px;
+            }
+            .header {
+                font-size: 20px;
+                font-weight: 100;
+                text-align: center;
+                color: #007cae;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 100;
+               /* text-align: right;*/
+               padding: 10px 20px 0px 20px;
+            }
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                padding: 10px 20px 0px 20px;
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+          span{
+            padding-left: 10px
+
+          }
+          #tab1{
+            border-style:dotted;
+          }
+        </style>
+
+
+    </head>
+    <body>
+    <div class='wrapper'>
+            <div class='header'>
+                <p class='title'></p>
+            </div>
+
+            <div class="" align="center">
+              Sri Sai Nursing home <br>121/C Eswaripuri colony,Sainikpuri, <br> Secundrabad
+              Ph:040-23704322; <br>Email:srisai@admin@gmail.com
+            </div> <br>
+
+          <table  >
+              <td  style="width:20%,"; >
+                Name: <br>
+                Hospital Id: <br>
+                Address:
+
+              </td>
+              <td  style="width:30%,"; >
+                {{reg.patient_name|upper}}<br>
+                {{reg.OPID}}<br>
+                {{reg.address|title}}
+              </td>
+
+                <td style="width:20%"; align="left">
+                  Date: <br>
+                  OP Number: <br>
+                  Age:
+
+                </td>
+                <td style="width:30%"; align="left">
+                  {{date}} <br>
+                  OP Number: <br>
+                  {{age_years}}y {{age_months}}m {{age_days}}d <br>
+
+                </td>
+            </table>
+
+            <table  >
+                <td  style="width:20%,"; >
+                  Dr Name: <br>
+                  Dept Name:  <br>
+                </td>
+                <td  style="width:30%,"; >
+                  {{doc.doctor_name|title}} <br>
+                  {{doc.dept}} <br>
+                </td>
+                  <td style="width:12%"; align="left">
+                    Ref Doctor: <br>
+                    Dr. Reg.No: <br>
+                  </td>
+              </table>
+          <hr class='hrItem' />
+          <table  >
+
+              <td >P.R: </td>
+              <td > </td>
+              <td >B.P: </td>
+              <td > </td>
+              <td >R.R </td>
+              <td > </td>
+              <td >Temp: </td>
+              <td > </td>
+              <td >Ht: </td>
+              <td > </td>
+              <td >Wt: </td>
+              <td > </td>
+              <td >BMI:</td>
+              <td > </td>
+            </table>
+
+        <hr class='hrItem' />
+        <table  >
+            <td  style="width:50%,"; >
+              Allergy: <br>
+            </td>
+            <td style="width:12%"; align="left">
+              Token.No: <br>
+            </td>
+        </table>
+
+        <div class="Regdetails">
+          <table border="1px"; align="center">
+            <thead >
+              <th style="height:30">Date/Time</th>
+              <th>Clinical Notes/Investigations</th>
+              <th>Treatment</th>
+            </thead>
+            <tr>
+              <td style="width:10%;height:450">   . </td>
+              <td style="width:60%;height:450">    </td>
+              <td style="width:30%;height:450">    </td>
+
+            </tr>
+
+          </table> <br>
+
+
+
+
+        </div> <br>
+
+
+
+
+    </div>
+    </body>
+
+</html>

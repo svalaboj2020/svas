@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{%extends 'testapp/shome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+<link rel="stylesheet" href="{%static "css/home_item.css"%}">
+<div class="div2"; align="center">
+
+  {%if ie_low_stock %}
+  <h3>Low Stock Details</h3>
+    <table border="2">
+    <thead>
+
+      <th>item_name</th>
+      <th>print_name</th>
+      <th>supplier_ref</th>
+      <th>Qty_in</th>
+      <th>Qty_available</th>
+    </thead>
+    {%for areport in ie_low_stock%}
+    <tr>
+      <td>{{areport.item_name}}</td>
+      <td>{{areport.print_name}}</td>
+      <td>{{areport.supplier_ref}}</td>
+      <td >{{areport.Qty_in}}</td>
+      <td align="center"; style="color:red; ">{{areport.Qty_available}}</td>
+
+    </tr>
+    {%endfor%}
+  </table> <br><br>
+     <a href="/report/low_stock" class='btn btn-primary'>Export to a File</a>
+  {%endif%}
+   <br><br>
+   {%if ie_current_stock %}
+   <h3>Current Stock Details</h3>
+     <table border="2">
+     <thead>
+       <th>item_code</th>
+       <th>Qty_avail</th>
+
+     </thead>
+     {%for k,v in ie_current_stock.items %}
+     <tr>
+       <td>{{k}}</td>
+       <td align="center";>{{v}}</td>
+
+
+     </tr>
+     {%endfor%}
+   </table><br><br>
+   <a href="/report/summary" class='btn btn-primary'>Export to a File</a>
+   {%endif%}
+
+
+</div>
+
+
+
+
+{%endblock%}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{%extends 'testapp/shome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+
+<style media="screen">
+#id1{
+  text-align: center;
+}
+</style>
+
+
+
+
+<div class="div2"; align="center">
+
+  {%if result %}
+  {{result.bill_no_ref}} <br>
+  {{result.email}} <br>
+  {{result.phone}}
+  {%else%}
+  not created
+  {%endif%}
+
+
+{%if se%}
+<h3>Sell Entry Details</h3>
+<table border="2">
+  <thead>
+    <th id="id1">Bill<br>No</th>
+    <th id="id1">Bill<br>Amount </th>
+    <th id="id1">Tax<br>Amount</th>
+    <th id="id1">Grand<br>Total</th>
+    <th id="id1">Sell<br>Datetime</th>
+    <th id="id1">Status</th>
+    <th id="id1">Mode Of <br> Pay</th>
+    <th id="id1">Tx_ref</th>
+    <th id="id1">Bank</th>
+    <th id="id1">Cash</th>
+    <th id="id1">Card</th>
+    <th id="id1">Return<br>cash</th>
+    <th id="id1">Disc <br>amount</th>
+
+  </thead>
+
+  <tr>
+    <td>{{se.bill_no}}</td>
+    <td>{{se.bill_amount}}</td>
+    <td>{{se.tax_amount}}</td>
+    <td style="color:Red;text-align:center;font-size:160%;">{{se.grand_total}}</td>
+    <td>{{se.sell_datetime}}</td>
+    <td>{{se.status}}</td>
+    <td>{{se.mode_of_payment}}</td>
+    <td>{{se.tx_id_reference}}</td>
+    <td>{{se.card_issued_bank}}</td>
+    <td style="color:blue;text-align:center;font-size:160%;">{{se.paid_by_cash}}</td>
+    <td style="text-align:center;font-size:160%;">{{se.paid_by_card}}</td>
+    <td style="color:blue;text-align:center;font-size:160%;">{{se.return_cash}}</td>
+    <td style="color:blue;text-align:center;font-size:160%;">{{se.discount_amount}}</td>
+  </tr>
+</table>
+<br><br>
+{%endif%}
+
+
+
+<h3>Out Item Entry List</h3>
+
+
+  {%if areports %}
+
+
+  <table border="2">
+    <thead>
+      <th>bill_no_ref</th>
+      <th>BatchNo</th>
+      <th>item_entry_ref</th>
+      <th>Qty_sold</th>
+      <th>MRP</th>
+      <th>bill_item_amount</th>
+      <th>bill_tax_amount</th>
+      <th>status</th>
+        {%if status == 'UNLOCKED'%}
+      <th>Action</th>
+        {%endif%}
+
+    </thead>
+    {%for areport in areports%}
+    <tr>
+      <td>{{areport.bill_no_ref}}</td>
+      <td>{{areport.item_entry_ref.BatchNo}}</td>
+      <td>{{areport.item_entry_ref}}</td>
+      <td>{{areport.Qty_sold}}</td>
+      <td>{{areport.item_entry_ref.MRP}}</td>
+      <td>{{areport.bill_item_amount}}</td>
+      <td>{{areport.bill_tax_amount}}</td>
+      <td>{{areport.status}}</td>
+        {%if status == 'UNLOCKED'%}
+      <td><a href="/del_oie/{{areport.id}}" class="btn btn-primary "> delete</a></td>
+        {%endif%}
+      <!-- <td><a href="/upd_oie/{{areport.id}}" class="btn btn-secondary "> update</a></td> -->
+    </tr>
+    {%endfor%}
+  </table>
+  {%else%}
+  <h1>No report records</h1>
+  {%endif%} <br><br>
+  {%if se.status == "UNLOCKED" %}
+<td> <a class="btn btn-primary " href="/pay_rbill/{{se.bill_no}}" role="button">pay retail Bill</a></td>
+  {%endif%}
+  {%if se.status == "LOCKED" %}
+<td> <a class="btn btn-primary " href="/generate_rbill/{{se.bill_no}}" role="button">generate Bill</a></td>
+  {%endif%}
+</div>
+
+
+
+
+{%endblock%}

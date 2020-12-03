@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{%include 'testapp1/rhome.html' %}
+{%load static%}
+
+{%block grand_child_block%}
+<div align="center">
+
+    <h2>{{title}}</h2>
+
+    {%if form%}
+    <form  method="post">
+      <table >
+        <tr>
+          {%for field in form%}
+            <td>{{ field.label }} &nbsp;&nbsp;</td>
+            <td>{{ field }}</td>
+            {%if forloop.counter|divisibleby:"3" %}
+               <tr>
+            {%endif%}
+          {%endfor%}
+        </tr>
+
+    </table>
+
+      <br>
+      {%csrf_token%}
+      <input type="submit" button class="btn  btn-success" value= {{title}}>
+    </form>
+    {%endif%}
+
+    {%if errors %}
+      <p style="color:red; font-size:160%">Error : <br>
+        <table border="1">
+          {%for k, v in errors.items%}
+            <tr>
+              <td>{{k}}</td>
+              <td>{{v}}</td>
+            </tr>
+          {%endfor%}
+        </table>
+      </p>
+    {%endif%}
+
+    {%if msg%}
+      {{result.patient_name}}
+      {{result.phone}}
+      {{msg}}
+    {%endif%}
+
+
+
+  </div>
+{%endblock%}
