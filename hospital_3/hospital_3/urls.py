@@ -18,6 +18,7 @@ from django.urls import path, include
 from testapp import views as v1
 from testapp1 import views as v2
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', v1.home),
