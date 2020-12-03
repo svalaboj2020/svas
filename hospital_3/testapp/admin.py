@@ -1,5 +1,6 @@
 from django.contrib import admin
 from testapp.models import *
+#
 class Supplier_AddressAdmin(admin.ModelAdmin):
     list_display=['companyname','town','city','email','phone']
 
